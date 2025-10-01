@@ -45,7 +45,7 @@ A comprehensive Library Management System built with Spring Boot, MySQL, and RES
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/library-management-system.git
+git clone https://github.com/Gangadhar5168/library-management-system.git
 cd library-management-system
 ```
 
