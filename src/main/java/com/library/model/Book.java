@@ -7,8 +7,11 @@ import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "books")
+@JsonIgnoreProperties({"hibernateLazyIntializer", "handler"})
 public class Book {
     
     @Id
