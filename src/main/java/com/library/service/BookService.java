@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.library.exception.ResourceAlreadyExistsException;
+import com.library.exception.ResourceNotFoundException;
 import com.library.model.Book;
 import com.library.repository.BookRepository;
 
@@ -18,7 +20,7 @@ public class BookService {
     //create book
     public Book createBook(Book book){
         if (bookRepository.existsByIsbn(book.getIsbn())){
-            throw new RuntimeException("Book with ISBN "+book.getIsbn() +" already exists");
+            throw new ResourceAlreadyExistsException("Book", "ISBN", book.getIsbn());
         }
         return bookRepository.save(book);
     }
@@ -62,7 +64,7 @@ public class BookService {
 
     public Book updateBook(Long id, Book bookDetails){
         Book book = bookRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("Book not found"));
+                .orElseThrow(()-> new ResourceNotFoundException("Book", "id", id));
         book.setTitle(bookDetails.getTitle());
         book.setAuthor(bookDetails.getAuthor());
         book.setPublisher(bookDetails.getPublisher());
@@ -78,7 +80,7 @@ public class BookService {
     //Delete book
     public void deleteBook(Long id){
         if(!bookRepository.existsById(id)){
-            throw new RuntimeException("Book not found");
+            throw new ResourceNotFoundException("Book", "id", id);
         }
         bookRepository.deleteById(id);
     }
