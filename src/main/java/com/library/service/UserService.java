@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.library.exception.ResourceAlreadyExistsException;
+import com.library.exception.ResourceNotFoundException;
 import com.library.model.User;
 import com.library.repository.UserRepository;
 
@@ -18,10 +20,10 @@ public class UserService {
     //create User
     public User createUser(User user){
         if (userRepository.existsByUsername(user.getUsername())){
-            throw new RuntimeException("Username already exists");
+            throw new ResourceAlreadyExistsException("User", "username", user.getUsername());
         }
         if (userRepository.existsByEmail(user.getEmail())){
-            throw new RuntimeException("Email already exists");
+            throw new ResourceAlreadyExistsException("User", "email", user.getEmail());
         }
         return userRepository.save(user);
     }
@@ -44,7 +46,7 @@ public class UserService {
     // update user 
     public User updateUser(Long id, User userDetails){
         User user = userRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("User not found"));
+                .orElseThrow(()-> new  ResourceNotFoundException("User", "id", id));
         user.setFullName(userDetails.getFullName());
         user.setEmail(userDetails.getEmail());
         user.setPhoneNumber(userDetails.getPhoneNumber());
@@ -56,7 +58,7 @@ public class UserService {
     // delete user
     public void deleteUser(Long id){
         if (!userRepository.existsById(id)){
-            throw new RuntimeException("User not found");
+            throw new  ResourceNotFoundException("User", "id", id);
         }
         userRepository.deleteById(id);
     }

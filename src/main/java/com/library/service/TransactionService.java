@@ -11,6 +11,9 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.library.exception.BookNotAvailableException;
+import com.library.exception.ResourceNotFoundException;
+import com.library.exception.TransactionNotAvailableException;
 import com.library.model.Book;
 import com.library.model.Transaction;
 import com.library.model.TransactionStatus;
@@ -38,21 +41,21 @@ public class TransactionService {
     @Transactional
     public Transaction borrowBook(Long userId, Long bookId){
         User user = userRepository.findById(userId)
-                .orElseThrow(()-> new RuntimeException("User not found"));
+                .orElseThrow(()-> new ResourceNotFoundException("User", "id", userId));
 
         Book book = bookRepository.findById(bookId)
-                .orElseThrow(()-> new RuntimeException("Book not found"));
+                .orElseThrow(()-> new ResourceNotFoundException("Book", "id", bookId));
 
         // check if book is available to borrow
         if (book.getAvailableCopies()<=0){
-            throw new RuntimeException("Book is not available for borrowing");
+            throw new BookNotAvailableException("Book '" + book.getTitle() + "' is not available for borrowing");
         }
 
         //check if the user already has this book
         Optional<Transaction> existingTransaction = transactionRepository
             .findByUserIdAndBookIdAndStatus(userId, bookId, TransactionStatus.ACTIVE);
         if(existingTransaction.isPresent()){
-            throw new RuntimeException("user has already borrowed this book");
+            throw new BookNotAvailableException("User has already borrowed this book and hasn't returned it yet");
         }
 
         //create borrow transaction
@@ -69,14 +72,14 @@ public class TransactionService {
     @Transactional
     public Transaction returnBook(Long userId,Long bookId){
         User user  = userRepository.findById(userId)
-                .orElseThrow(()-> new RuntimeException("User not found"));
+                .orElseThrow(()-> new ResourceNotFoundException("User", "id", userId));
         Book book = bookRepository.findById(bookId)
-                .orElseThrow(()-> new RuntimeException("Book not found"));
+                .orElseThrow(()-> new ResourceNotFoundException("Book", "id", bookId));
         
         //Find Active borrow transaction
         Transaction borrowTransaction = transactionRepository
             .findByUserIdAndBookIdAndStatus(userId, bookId, TransactionStatus.ACTIVE)
-            .orElseThrow(()-> new RuntimeException("No active borrow record found"));
+            .orElseThrow(()-> new TransactionNotAvailableException("No active borrow record found for user ID " + userId + " and book ID " + bookId));
 
         //update borrow transaction
         borrowTransaction.setReturnDate(LocalDateTime.now());

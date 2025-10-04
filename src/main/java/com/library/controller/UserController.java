@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.library.exception.ResourceNotFoundException;
 import com.library.model.User;
 import com.library.service.UserService;
 
@@ -53,7 +54,7 @@ public class UserController {
         if(user.isPresent()){
             return new ResponseEntity<>(user.get(),HttpStatus.OK);
         }
-        return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+        throw new ResourceNotFoundException("User", "id",id);
     }
 
     // Update user
