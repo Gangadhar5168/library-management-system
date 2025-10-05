@@ -1,0 +1,10 @@
+.git
+.DS_Store
+*.log
+logs/
+frontend/
+.mvn/wrapper/maven-wrapper.jar
+src/test/
+*.md
+.gitignore
+.gitattributes
