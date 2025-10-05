@@ -1,0 +1,1 @@
+web: java -Dspring.profiles.active=prod -Dserver.port=$PORT -Dspring.datasource.url=jdbc:h2:mem:library;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE -Dspring.jpa.database-platform=org.hibernate.dialect.H2Dialect -Dspring.datasource.platform=h2 -jar target/library-management-system-0.0.1-SNAPSHOT.jar

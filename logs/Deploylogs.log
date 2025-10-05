@@ -1,0 +1,1001 @@
+2025-10-05T20:14:24.337582107Z [inf]  2025-10-05T20:14:24.334Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for dueDate
+2025-10-05T20:14:24.337586687Z [inf]  2025-10-05T20:14:24.335Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for fine
+2025-10-05T20:14:24.337592891Z [inf]  2025-10-05T20:14:24.335Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for returnDate
+2025-10-05T20:14:24.337598174Z [inf]  2025-10-05T20:14:24.335Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for status
+2025-10-05T20:14:24.337603620Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for transactionDate
+2025-10-05T20:14:24.337608094Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for transactionType
+2025-10-05T20:14:24.337614165Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for id
+2025-10-05T20:14:24.337620743Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for accountNonExpired
+2025-10-05T20:14:24.337626020Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for accountNonLocked
+2025-10-05T20:14:24.337630108Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for credentialsNonExpired
+2025-10-05T20:14:24.337634217Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for email
+2025-10-05T20:14:24.337638275Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for enabled
+2025-10-05T20:14:24.337643639Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for fullName
+2025-10-05T20:14:24.337648137Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for password
+2025-10-05T20:14:24.337652908Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for phoneNumber
+2025-10-05T20:14:24.337657424Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for role
+2025-10-05T20:14:24.337664287Z [inf]  2025-10-05T20:14:24.336Z DEBUG 1 --- [           main] o.h.b.model.internal.BasicValueBinder    : Starting `BasicValueBinder#fillSimpleValue` for username
+2025-10-05T20:14:24.345748154Z [inf]  2025-10-05T20:14:24.341Z DEBUG 1 --- [           main] org.hibernate.mapping.PrimaryKey         : Forcing column [id] to be non-null as it is part of the primary key for table [books]
+2025-10-05T20:14:24.345756778Z [inf]  2025-10-05T20:14:24.341Z DEBUG 1 --- [           main] org.hibernate.mapping.PrimaryKey         : Forcing column [id] to be non-null as it is part of the primary key for table [transactions]
+2025-10-05T20:14:24.345762117Z [inf]  2025-10-05T20:14:24.342Z DEBUG 1 --- [           main] org.hibernate.mapping.PrimaryKey         : Forcing column [id] to be non-null as it is part of the primary key for table [users]
+2025-10-05T20:14:24.399516110Z [inf]  2025-10-05T20:14:24.396Z DEBUG 1 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Building session factory
+2025-10-05T20:14:24.435283862Z [inf]  2025-10-05T20:14:24.431Z DEBUG 1 --- [           main] .h.s.i.SessionFactoryServiceRegistryImpl : EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2025-10-05T20:14:24.435291914Z [inf]  2025-10-05T20:14:24.431Z DEBUG 1 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Instantiating SessionFactory with settings: {hibernate.format_sql=false, java.specification.version=21, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@163df259, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=ANSI_X3.4-1968, hibernate.dialect=org.hibernate.dialect.H2Dialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=target/library-management-system-0.0.1-SNAPSHOT.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, java.vendor.url=https://java.oracle.com/, catalina.useNaming=false, user.timezone=Etc/UTC, jakarta.persistence.sharedCache.mode=UNSPECIFIED, org.jboss.logging.provider=slf4j, java.vm.specification.version=21, os.name=Linux, jakarta.persistence.nonJtaDataSource=HikariDataSource (HikariPool-1), sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=/mise/installs/java/21.0.2/lib, sun.java.command=target/library-management-system-0.0.1-SNAPSHOT.jar, javax.persistence.nonJtaDataSource=HikariDataSource (HikariPool-1), hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@405603b6, jdk.debug=release, sun.cpu.endian=little, hibernate.cdi.extensions=true, user.home=/root, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2024-01-16, java.home=/mise/installs/java/21.0.2, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+2025-10-05T20:14:24.435297723Z [inf]  , hibernate.persistenceUnitName=default, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, FILE_LOG_CHARSET=UTF-8, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.headless=true, jakarta.persistence.validation.mode=AUTO, hibernate.hbm2ddl.auto=create-drop, java.protocol.handler.pkgs=org.springframework.boot.loader.net.protocol, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=21.0.2+13-58, user.name=root, stdout.encoding=ANSI_X3.4-1968, path.separator=:, os.version=6.12.12+bpo-cloud-amd64, java.runtime.name=OpenJDK Runtime Environment, file.encoding=UTF-8, server.port=8080, java.vm.name=OpenJDK 64-Bit Server VM, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=/tmp, catalina.home=/tmp/tomcat.8080.9044799940567944780, java.version=21.0.2, hibernate.physical_naming_strategy=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy, user.dir=/app, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, PID=1, CONSOLE_LOG_CHARSET=UTF-8, catalina.base=/tmp/tomcat.8080.9044799940567944780, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@3c3cd13a, native.encoding=ANSI_X3.4-1968, java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, stderr.encoding=ANSI_X3.4-1968, java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=21.0.2+13-58, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, hibernate.connection.datasource=HikariDataSource (HikariPool-1), java.class.version=65.0}
+2025-10-05T20:14:24.435301857Z [inf]  2025-10-05T20:14:24.433Z DEBUG 1 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Session factory constructed with filter configurations : {}
+2025-10-05T20:14:24.438674945Z [inf]  2025-10-05T20:14:24.437Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2025-10-05T20:14:24.438682709Z [inf]  2025-10-05T20:14:24.437Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2025-10-05T20:14:24.438689269Z [inf]  2025-10-05T20:14:24.437Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2025-10-05T20:14:24.438699332Z [inf]  2025-10-05T20:14:24.438Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2025-10-05T20:14:24.438704440Z [inf]  2025-10-05T20:14:24.438Z DEBUG 1 --- [           main] o.h.v.i.e.resolver.TraversableResolvers  : Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2025-10-05T20:14:24.438718006Z [inf]  2025-10-05T20:14:24.438Z DEBUG 1 --- [           main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2025-10-05T20:14:24.442629471Z [inf]  2025-10-05T20:14:24.439Z DEBUG 1 --- [           main] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2025-10-05T20:14:24.442637756Z [inf]  2025-10-05T20:14:24.440Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2025-10-05T20:14:24.442643500Z [inf]  2025-10-05T20:14:24.440Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2025-10-05T20:14:24.442648546Z [inf]  2025-10-05T20:14:24.440Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2025-10-05T20:14:24.442653970Z [inf]  2025-10-05T20:14:24.440Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2025-10-05T20:14:24.442659687Z [inf]  2025-10-05T20:14:24.440Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2025-10-05T20:14:24.442664320Z [inf]  2025-10-05T20:14:24.440Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2025-10-05T20:14:24.442669051Z [inf]  2025-10-05T20:14:24.441Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.library.model.Transaction] is safe
+2025-10-05T20:14:24.442673339Z [inf]  2025-10-05T20:14:24.441Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.library.model.Transaction
+2025-10-05T20:14:24.478749333Z [inf]  2025-10-05T20:14:24.472Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.library.model.Book] is safe
+2025-10-05T20:14:24.478755670Z [inf]  2025-10-05T20:14:24.472Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.library.model.Book
+2025-10-05T20:14:24.481834634Z [inf]  2025-10-05T20:14:24.480Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.library.model.User] is safe
+2025-10-05T20:14:24.481841517Z [inf]  2025-10-05T20:14:24.480Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.library.model.User
+2025-10-05T20:14:24.491460505Z [inf]  2025-10-05T20:14:24.486Z DEBUG 1 --- [           main] .h.s.i.SessionFactoryServiceRegistryImpl : EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2025-10-05T20:14:24.563138894Z [inf]  2025-10-05T20:14:24.558Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(max)] under max; prior registration was null
+2025-10-05T20:14:24.563144293Z [inf]  2025-10-05T20:14:24.558Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(min)] under min; prior registration was null
+2025-10-05T20:14:24.563149542Z [inf]  2025-10-05T20:14:24.559Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sum)] under sum; prior registration was null
+2025-10-05T20:14:24.563154930Z [inf]  2025-10-05T20:14:24.559Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(avg)] under avg; prior registration was null
+2025-10-05T20:14:24.563160878Z [inf]  2025-10-05T20:14:24.560Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CountFunction@50e1f3fc] under count; prior registration was null
+2025-10-05T20:14:24.563168308Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.EveryAnyEmulation@35d4035f] under every; prior registration was null
+2025-10-05T20:14:24.563173767Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.EveryAnyEmulation@6f4fc83f] under any; prior registration was null
+2025-10-05T20:14:24.563178984Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(floor)] under floor; prior registration was null
+2025-10-05T20:14:24.563184560Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ceiling)] under ceiling; prior registration was null
+2025-10-05T20:14:24.563189935Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(mod)] under mod; prior registration was null
+2025-10-05T20:14:24.563196140Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(abs)] under abs; prior registration was null
+2025-10-05T20:14:24.563202094Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sign)] under sign; prior registration was null
+2025-10-05T20:14:24.563207525Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sqrt)] under sqrt; prior registration was null
+2025-10-05T20:14:24.563213983Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ln)] under ln; prior registration was null
+2025-10-05T20:14:24.563219216Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(exp)] under exp; prior registration was null
+2025-10-05T20:14:24.563225134Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(power)] under power; prior registration was null
+2025-10-05T20:14:24.563230773Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(round)] under round; prior registration was null
+2025-10-05T20:14:24.563235922Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sin)] under sin; prior registration was null
+2025-10-05T20:14:24.563242858Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(cos)] under cos; prior registration was null
+2025-10-05T20:14:24.563247838Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(tan)] under tan; prior registration was null
+2025-10-05T20:14:24.563252974Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(asin)] under asin; prior registration was null
+2025-10-05T20:14:24.563259689Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(acos)] under acos; prior registration was null
+2025-10-05T20:14:24.563265501Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(atan)] under atan; prior registration was null
+2025-10-05T20:14:24.563271509Z [inf]  2025-10-05T20:14:24.561Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(atan2)] under atan2; prior registration was null
+2025-10-05T20:14:24.566230385Z [inf]  2025-10-05T20:14:24.562Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@4feec184] under sinh; prior registration was null
+2025-10-05T20:14:24.566236840Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@5e055ce1] under cosh; prior registration was null
+2025-10-05T20:14:24.566244143Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@3278d065] under tanh; prior registration was null
+2025-10-05T20:14:24.566250680Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@545f0b6] under pi; prior registration was null
+2025-10-05T20:14:24.566257194Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@3c9ef37b] under log; prior registration was null
+2025-10-05T20:14:24.566280176Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(coalesce)] under coalesce; prior registration was null
+2025-10-05T20:14:24.566452743Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(nullif)] under nullif; prior registration was null
+2025-10-05T20:14:24.566462241Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(upper)] under upper; prior registration was null
+2025-10-05T20:14:24.566473006Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(left)] under left; prior registration was null
+2025-10-05T20:14:24.566476258Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(substring)] under substring; prior registration was null
+2025-10-05T20:14:24.566483928Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(locate)] under locate; prior registration was null
+2025-10-05T20:14:24.566492021Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(character_length)] under character_length; prior registration was null
+2025-10-05T20:14:24.566498360Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(right)] under right; prior registration was null
+2025-10-05T20:14:24.566502550Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : length -> character_length
+2025-10-05T20:14:24.566510817Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(replace)] under replace; prior registration was null
+2025-10-05T20:14:24.566511139Z [inf]  2025-10-05T20:14:24.564Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.LocatePositionEmulation@51468039] under position; prior registration was null
+2025-10-05T20:14:24.566525470Z [inf]  2025-10-05T20:14:24.565Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.InsertSubstringOverlayEmulation@8315e4a] under overlay; prior registration was null
+2025-10-05T20:14:24.566525638Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(concat)] under concat; prior registration was null
+2025-10-05T20:14:24.566537044Z [inf]  2025-10-05T20:14:24.563Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lower)] under lower; prior registration was null
+2025-10-05T20:14:24.570495506Z [inf]  2025-10-05T20:14:24.566Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.TrimFunction@23d978b] under trim; prior registration was null
+2025-10-05T20:14:24.570502215Z [inf]  2025-10-05T20:14:24.566Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CastFunction@4b511e61] under cast; prior registration was null
+2025-10-05T20:14:24.570507695Z [inf]  2025-10-05T20:14:24.566Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@74a74070] under collate; prior registration was null
+2025-10-05T20:14:24.570512958Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.ExtractFunction@50e8ed74] under extract; prior registration was null
+2025-10-05T20:14:24.570517981Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(least)] under least; prior registration was null
+2025-10-05T20:14:24.570524876Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(greatest)] under greatest; prior registration was null
+2025-10-05T20:14:24.570530218Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CoalesceIfnullEmulation@2d2f09a4] under ifnull; prior registration was null
+2025-10-05T20:14:24.570535583Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lpad)] under lpad; prior registration was null
+2025-10-05T20:14:24.570540812Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rpad)] under rpad; prior registration was null
+2025-10-05T20:14:24.570546720Z [inf]  2025-10-05T20:14:24.567Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.LpadRpadPadEmulation@103478b8] under pad; prior registration was null
+2025-10-05T20:14:24.570551964Z [inf]  2025-10-05T20:14:24.568Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CastStrEmulation@39f68aec] under str; prior registration was null
+2025-10-05T20:14:24.570557335Z [inf]  2025-10-05T20:14:24.569Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.FormatFunction@2759749] under format; prior registration was null
+2025-10-05T20:14:24.574143942Z [inf]  2025-10-05T20:14:24.569Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.TimestampaddFunction@729d6ee2] under timestampadd; prior registration was null
+2025-10-05T20:14:24.574152673Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.TimestampdiffFunction@515c732d] under timestampdiff; prior registration was null
+2025-10-05T20:14:24.574159032Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : dateadd -> timestampadd
+2025-10-05T20:14:24.574165371Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : datediff -> timestampdiff
+2025-10-05T20:14:24.574171871Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@633a11eb] under current_date; prior registration was null
+2025-10-05T20:14:24.574178234Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@7a247711] under current_time; prior registration was null
+2025-10-05T20:14:24.574184879Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@4910afdf] under current_timestamp; prior registration was null
+2025-10-05T20:14:24.574190792Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : current date -> current_date
+2025-10-05T20:14:24.574197543Z [inf]  2025-10-05T20:14:24.570Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : current time -> current_time
+2025-10-05T20:14:24.574204738Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : current timestamp -> current_timestamp
+2025-10-05T20:14:24.574211235Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@764db16c] under local_date; prior registration was null
+2025-10-05T20:14:24.574217784Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@45cb5307] under local_time; prior registration was null
+2025-10-05T20:14:24.574224241Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@1c8e2850] under local_datetime; prior registration was null
+2025-10-05T20:14:24.574228774Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@50ac1249] under offset_datetime; prior registration was null
+2025-10-05T20:14:24.574234295Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : local date -> local_date
+2025-10-05T20:14:24.574239240Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : local time -> local_time
+2025-10-05T20:14:24.574243949Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : local datetime -> local_datetime
+2025-10-05T20:14:24.574248902Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : offset datetime -> offset_datetime
+2025-10-05T20:14:24.574436873Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@4bf10fe1] under instant; prior registration was null
+2025-10-05T20:14:24.574444025Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : current_instant -> instant
+2025-10-05T20:14:24.574449165Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.SqlFunction@34fc315d] under sql; prior registration was null
+2025-10-05T20:14:24.574454949Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(max)] under max; prior registration was NamedSqmFunctionTemplate(max)
+2025-10-05T20:14:24.574459862Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(min)] under min; prior registration was NamedSqmFunctionTemplate(min)
+2025-10-05T20:14:24.574464717Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sum)] under sum; prior registration was NamedSqmFunctionTemplate(sum)
+2025-10-05T20:14:24.574469418Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(avg)] under avg; prior registration was NamedSqmFunctionTemplate(avg)
+2025-10-05T20:14:24.574474338Z [inf]  2025-10-05T20:14:24.571Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.CountFunction@34f48d1] under count; prior registration was org.hibernate.dialect.function.CountFunction@50e1f3fc
+2025-10-05T20:14:24.574479435Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.AvgFunction@69ab2d6a] under avg; prior registration was NamedSqmFunctionTemplate(avg)
+2025-10-05T20:14:24.574484949Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(pi)] under pi; prior registration was org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@545f0b6
+2025-10-05T20:14:24.574487317Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(radians)] under radians; prior registration was null
+2025-10-05T20:14:24.574492688Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(cot)] under cot; prior registration was null
+2025-10-05T20:14:24.574497527Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(degrees)] under degrees; prior registration was null
+2025-10-05T20:14:24.574505535Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(log10)] under log10; prior registration was null
+2025-10-05T20:14:24.574671984Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@505a8582] under mod; prior registration was NamedSqmFunctionTemplate(mod)
+2025-10-05T20:14:24.574685108Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rand)] under rand; prior registration was null
+2025-10-05T20:14:24.574696396Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(soundex)] under soundex; prior registration was null
+2025-10-05T20:14:24.574706494Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(translate)] under translate; prior registration was null
+2025-10-05T20:14:24.574863618Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bitand)] under bitand; prior registration was null
+2025-10-05T20:14:24.574871423Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bitor)] under bitor; prior registration was null
+2025-10-05T20:14:24.574879392Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bitxor)] under bitxor; prior registration was null
+2025-10-05T20:14:24.574884975Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bitnot)] under bitnot; prior registration was null
+2025-10-05T20:14:24.574890740Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bit_and)] under bit_and; prior registration was null
+2025-10-05T20:14:24.574897179Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bit_or)] under bit_or; prior registration was null
+2025-10-05T20:14:24.574902814Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(day)] under day; prior registration was null
+2025-10-05T20:14:24.574909090Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(month)] under month; prior registration was null
+2025-10-05T20:14:24.574916169Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(year)] under year; prior registration was null
+2025-10-05T20:14:24.574921660Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(hour)] under hour; prior registration was null
+2025-10-05T20:14:24.574927705Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(minute)] under minute; prior registration was null
+2025-10-05T20:14:24.574933420Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(second)] under second; prior registration was null
+2025-10-05T20:14:24.574938511Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(microsecond)] under microsecond; prior registration was null
+2025-10-05T20:14:24.574943729Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(day_of_week)] under day_of_week; prior registration was null
+2025-10-05T20:14:24.574949066Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(day_of_month)] under day_of_month; prior registration was null
+2025-10-05T20:14:24.574954057Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : day -> day_of_month
+2025-10-05T20:14:24.574959619Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(day_of_year)] under day_of_year; prior registration was null
+2025-10-05T20:14:24.574966088Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(week)] under week; prior registration was null
+2025-10-05T20:14:24.574971348Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(quarter)] under quarter; prior registration was null
+2025-10-05T20:14:24.574976808Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(monthname)] under monthname; prior registration was null
+2025-10-05T20:14:24.574982346Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(dayname)] under dayname; prior registration was null
+2025-10-05T20:14:24.574987463Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtime)] under localtime; prior registration was null
+2025-10-05T20:14:24.574993020Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtimestamp)] under localtimestamp; prior registration was null
+2025-10-05T20:14:24.574999139Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtime)] under local_time; prior registration was org.hibernate.dialect.function.CurrentFunction@45cb5307
+2025-10-05T20:14:24.575004586Z [inf]  2025-10-05T20:14:24.572Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtimestamp)] under local_datetime; prior registration was org.hibernate.dialect.function.CurrentFunction@1c8e2850
+2025-10-05T20:14:24.575009671Z [inf]  2025-10-05T20:14:24.573Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.TruncFunction@465d1345] under trunc; prior registration was null
+2025-10-05T20:14:24.575014631Z [inf]  2025-10-05T20:14:24.573Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : truncate -> trunc
+2025-10-05T20:14:24.575019883Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@62cf86d6] under date_trunc; prior registration was null
+2025-10-05T20:14:24.575025460Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bit_length)] under bit_length; prior registration was null
+2025-10-05T20:14:24.575030669Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(octet_length)] under octet_length; prior registration was null
+2025-10-05T20:14:24.575036104Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ascii)] under ascii; prior registration was null
+2025-10-05T20:14:24.575041445Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(octet_length)] under octet_length; prior registration was NamedSqmFunctionTemplate(octet_length)
+2025-10-05T20:14:24.575279916Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(space)] under space; prior registration was null
+2025-10-05T20:14:24.575283825Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(repeat)] under repeat; prior registration was null
+2025-10-05T20:14:24.575287528Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(char)] under char; prior registration was null
+2025-10-05T20:14:24.575291416Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : chr -> char
+2025-10-05T20:14:24.575295278Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(instr)] under instr; prior registration was null
+2025-10-05T20:14:24.575299030Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(substr)] under substr; prior registration was null
+2025-10-05T20:14:24.575302910Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@2a6c751f] under position; prior registration was org.hibernate.dialect.function.LocatePositionEmulation@51468039
+2025-10-05T20:14:24.575306834Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ltrim)] under ltrim; prior registration was null
+2025-10-05T20:14:24.575310673Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rtrim)] under rtrim; prior registration was null
+2025-10-05T20:14:24.575314496Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6dd2e453] under concat; prior registration was NamedSqmFunctionTemplate(concat)
+2025-10-05T20:14:24.575318219Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(curtime)] under curtime; prior registration was null
+2025-10-05T20:14:24.575322428Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(curdate)] under curdate; prior registration was null
+2025-10-05T20:14:24.575326675Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(now)] under now; prior registration was null
+2025-10-05T20:14:24.575330473Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sysdate)] under sysdate; prior registration was null
+2025-10-05T20:14:24.575334412Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(insert)] under insert; prior registration was null
+2025-10-05T20:14:24.575338208Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bool_and)] under bool_and; prior registration was null
+2025-10-05T20:14:24.575341953Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : every -> bool_and
+2025-10-05T20:14:24.575345731Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bool_or)] under bool_or; prior registration was null
+2025-10-05T20:14:24.575355255Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : any -> bool_or
+2025-10-05T20:14:24.575361477Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(median)] under median; prior registration was null
+2025-10-05T20:14:24.575367117Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(stddev_pop)] under stddev_pop; prior registration was null
+2025-10-05T20:14:24.575372487Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(stddev_samp)] under stddev_samp; prior registration was null
+2025-10-05T20:14:24.575377991Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(var_pop)] under var_pop; prior registration was null
+2025-10-05T20:14:24.575382397Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(var_samp)] under var_samp; prior registration was null
+2025-10-05T20:14:24.575386588Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.FormatFunction@433b1597] under format; prior registration was org.hibernate.dialect.function.FormatFunction@2759749
+2025-10-05T20:14:24.575391980Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rownum)] under rownum; prior registration was null
+2025-10-05T20:14:24.575396377Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(row_number)] under row_number; prior registration was null
+2025-10-05T20:14:24.578840431Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lag)] under lag; prior registration was null
+2025-10-05T20:14:24.578851173Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lead)] under lead; prior registration was null
+2025-10-05T20:14:24.578858310Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(first_value)] under first_value; prior registration was null
+2025-10-05T20:14:24.578866346Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(last_value)] under last_value; prior registration was null
+2025-10-05T20:14:24.578874333Z [inf]  2025-10-05T20:14:24.574Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(nth_value)] under nth_value; prior registration was null
+2025-10-05T20:14:24.578885629Z [inf]  2025-10-05T20:14:24.575Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.ListaggFunction@4e20a985] under listagg; prior registration was null
+2025-10-05T20:14:24.578892604Z [inf]  2025-10-05T20:14:24.575Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.InverseDistributionFunction@1fba3fd6] under mode; prior registration was null
+2025-10-05T20:14:24.578900350Z [inf]  2025-10-05T20:14:24.575Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.InverseDistributionFunction@3aab42d6] under percentile_cont; prior registration was null
+2025-10-05T20:14:24.578909640Z [inf]  2025-10-05T20:14:24.575Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.InverseDistributionFunction@6badb08c] under percentile_disc; prior registration was null
+2025-10-05T20:14:24.578915497Z [inf]  2025-10-05T20:14:24.576Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetFunction@71418a4a] under rank; prior registration was null
+2025-10-05T20:14:24.578922142Z [inf]  2025-10-05T20:14:24.576Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetFunction@67ecf7ed] under dense_rank; prior registration was null
+2025-10-05T20:14:24.578927386Z [inf]  2025-10-05T20:14:24.576Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetFunction@69d021c1] under percent_rank; prior registration was null
+2025-10-05T20:14:24.578936133Z [inf]  2025-10-05T20:14:24.576Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetFunction@6d5508a5] under cume_dist; prior registration was null
+2025-10-05T20:14:24.578942122Z [inf]  2025-10-05T20:14:24.577Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.ArrayConstructorFunction@66682e8f] under array; prior registration was null
+2025-10-05T20:14:24.578948182Z [inf]  2025-10-05T20:14:24.577Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.ArrayConstructorFunction@2d2af12e] under array_list; prior registration was null
+2025-10-05T20:14:24.578958161Z [inf]  2025-10-05T20:14:24.577Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.ArrayAggFunction@10e8c7a2] under array_agg; prior registration was null
+2025-10-05T20:14:24.582760360Z [inf]  2025-10-05T20:14:24.578Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayPositionFunction@1031c1a0] under array_position; prior registration was null
+2025-10-05T20:14:24.585753303Z [inf]  2025-10-05T20:14:24.582Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayPositionsFunction@104bc677] under array_positions; prior registration was null
+2025-10-05T20:14:24.585760563Z [inf]  2025-10-05T20:14:24.584Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayPositionsFunction@7dd7ec56] under array_positions_list; prior registration was null
+2025-10-05T20:14:24.585766702Z [inf]  2025-10-05T20:14:24.584Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6528d339] under array_length; prior registration was null
+2025-10-05T20:14:24.585772690Z [inf]  2025-10-05T20:14:24.584Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.DynamicDispatchFunction@bdda8a7] under length; prior registration was null
+2025-10-05T20:14:24.589598410Z [inf]  2025-10-05T20:14:24.585Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.ArrayConcatFunction@1df9f7c6] under array_concat; prior registration was null
+2025-10-05T20:14:24.589604856Z [inf]  2025-10-05T20:14:24.585Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.ArrayConcatElementFunction@713e49c3] under array_prepend; prior registration was null
+2025-10-05T20:14:24.589610846Z [inf]  2025-10-05T20:14:24.585Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.ArrayConcatElementFunction@13d5606c] under array_append; prior registration was null
+2025-10-05T20:14:24.589616669Z [inf]  2025-10-05T20:14:24.587Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayContainsFunction@572b4072] under array_contains; prior registration was null
+2025-10-05T20:14:24.589645269Z [inf]  2025-10-05T20:14:24.587Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayContainsFunction@322ab6ce] under array_contains_nullable; prior registration was null
+2025-10-05T20:14:24.589655826Z [inf]  2025-10-05T20:14:24.587Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayIncludesFunction@17a7d6c8] under array_includes; prior registration was null
+2025-10-05T20:14:24.589662353Z [inf]  2025-10-05T20:14:24.587Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayIncludesFunction@4f2b1e9f] under array_includes_nullable; prior registration was null
+2025-10-05T20:14:24.589668477Z [inf]  2025-10-05T20:14:24.588Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayIntersectsFunction@6ffdbeef] under array_intersects; prior registration was null
+2025-10-05T20:14:24.589701158Z [inf]  2025-10-05T20:14:24.588Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayIntersectsFunction@4a3509b0] under array_intersects_nullable; prior registration was null
+2025-10-05T20:14:24.589709044Z [inf]  2025-10-05T20:14:24.588Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : array_overlaps -> array_intersects
+2025-10-05T20:14:24.589714691Z [inf]  2025-10-05T20:14:24.588Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registering alternate key : array_overlaps_nullable -> array_intersects_nullable
+2025-10-05T20:14:24.589721747Z [inf]  2025-10-05T20:14:24.588Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6d7556a8] under array_get; prior registration was null
+2025-10-05T20:14:24.589730794Z [inf]  2025-10-05T20:14:24.588Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArraySetFunction@70bc3a9c] under array_set; prior registration was null
+2025-10-05T20:14:24.593356170Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : abs(NUMERIC arg)
+2025-10-05T20:14:24.593365236Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double acos(NUMERIC arg)
+2025-10-05T20:14:24.593377746Z [inf]  2025-10-05T20:14:24.590Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayToStringFunction@1ce6a9bd] under array_to_string; prior registration was null
+2025-10-05T20:14:24.593394159Z [inf]  2025-10-05T20:14:24.589Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayRemoveIndexFunction@194e78af] under array_remove_index; prior registration was null
+2025-10-05T20:14:24.593401380Z [inf]  2025-10-05T20:14:24.589Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@4fe4503a] under array_slice; prior registration was null
+2025-10-05T20:14:24.593407242Z [inf]  2025-10-05T20:14:24.589Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayReplaceFunction@7614378d] under array_replace; prior registration was null
+2025-10-05T20:14:24.593412952Z [inf]  2025-10-05T20:14:24.589Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@7028b5cc] under array_trim; prior registration was null
+2025-10-05T20:14:24.593419717Z [inf]  2025-10-05T20:14:24.590Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayFillFunction@4e79c25] under array_fill; prior registration was null
+2025-10-05T20:14:24.593425812Z [inf]  2025-10-05T20:14:24.590Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayFillFunction@2ace1cd3] under array_fill_list; prior registration was null
+2025-10-05T20:14:24.593447597Z [inf]  2025-10-05T20:14:24.589Z DEBUG 1 --- [           main] o.h.q.sqm.function.SqmFunctionRegistry   : Registered SqmFunctionTemplate [org.hibernate.dialect.function.array.H2ArrayRemoveFunction@24010875] under array_remove; prior registration was null
+2025-10-05T20:14:24.593997099Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean any(BOOLEAN predicate)
+2025-10-05T20:14:24.594009882Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array( ... )
+2025-10-05T20:14:24.594017490Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_agg(arg)
+2025-10-05T20:14:24.594025890Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_append( ... )
+2025-10-05T20:14:24.594032756Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_concat( ... )
+2025-10-05T20:14:24.594039694Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_contains(ARRAY haystackArray, OBJECT needleElementOrArray)
+2025-10-05T20:14:24.594048316Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_contains_nullable(ARRAY haystackArray, OBJECT needleElementOrArray)
+2025-10-05T20:14:24.594054042Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_fill(OBJECT element, INTEGER elementCount)
+2025-10-05T20:14:24.594060223Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_fill_list(OBJECT element, INTEGER elementCount)
+2025-10-05T20:14:24.594067853Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_get(ARRAY array, INTEGER index)
+2025-10-05T20:14:24.594076454Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_includes(ARRAY haystackArray, OBJECT needleArray)
+2025-10-05T20:14:24.594083808Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_includes_nullable(ARRAY haystackArray, OBJECT needleArray)
+2025-10-05T20:14:24.594091301Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_intersects(ARRAY array0, OBJECT array1)
+2025-10-05T20:14:24.594100622Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_intersects_nullable(ARRAY array0, OBJECT array1)
+2025-10-05T20:14:24.594107993Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer array_length(ARRAY array)
+2025-10-05T20:14:24.594115497Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_list( ... )
+2025-10-05T20:14:24.594122032Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_overlaps(ARRAY array0, OBJECT array1)
+2025-10-05T20:14:24.594128434Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean array_overlaps_nullable(ARRAY array0, OBJECT array1)
+2025-10-05T20:14:24.594136475Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer array_position(ARRAY array, OBJECT element[, INTEGER startPosition])
+2025-10-05T20:14:24.594143584Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : int[] array_positions(ARRAY array, OBJECT element)
+2025-10-05T20:14:24.594151662Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : List array_positions_list(ARRAY array, OBJECT element)
+2025-10-05T20:14:24.594166551Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_prepend( ... )
+2025-10-05T20:14:24.594175047Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_remove( ... )
+2025-10-05T20:14:24.594181484Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_remove_index( ... )
+2025-10-05T20:14:24.594189108Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_replace( ... )
+2025-10-05T20:14:24.594196878Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_set( ... )
+2025-10-05T20:14:24.594204353Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_slice(ARRAY array, INTEGER start, INTEGER end)
+2025-10-05T20:14:24.594212838Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String array_to_string( ... )
+2025-10-05T20:14:24.594220218Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : array_trim(ARRAY array, INTEGER elementsToRemove)
+2025-10-05T20:14:24.594226370Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer ascii(STRING arg)
+2025-10-05T20:14:24.594234645Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double asin(NUMERIC arg)
+2025-10-05T20:14:24.594241272Z [inf]  2025-10-05T20:14:24.592Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double atan(NUMERIC arg)
+2025-10-05T20:14:24.594249013Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double atan2(NUMERIC arg0, NUMERIC arg1)
+2025-10-05T20:14:24.594256527Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : avg(NUMERIC arg)
+2025-10-05T20:14:24.594266241Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : bit_and(arg)
+2025-10-05T20:14:24.594273522Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer bit_length(STRING_OR_CLOB arg)
+2025-10-05T20:14:24.594280228Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : bit_or(arg)
+2025-10-05T20:14:24.594286863Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : bitand(arg0, arg1)
+2025-10-05T20:14:24.594295415Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : bitnot(arg)
+2025-10-05T20:14:24.594303492Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : bitor(arg0, arg1)
+2025-10-05T20:14:24.594310729Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : bitxor(arg0, arg1)
+2025-10-05T20:14:24.594317770Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean bool_and(BOOLEAN predicate)
+2025-10-05T20:14:24.599163433Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean bool_or(BOOLEAN predicate)
+2025-10-05T20:14:24.599175802Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : cast(arg as Type)
+2025-10-05T20:14:24.599183472Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : ceiling(NUMERIC arg)
+2025-10-05T20:14:24.599191894Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Character char(INTEGER arg)
+2025-10-05T20:14:24.599198823Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer character_length(STRING_OR_CLOB arg)
+2025-10-05T20:14:24.599206185Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Character chr(INTEGER arg)
+2025-10-05T20:14:24.599213049Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : coalesce(arg0[, arg1[, ...]])
+2025-10-05T20:14:24.599226395Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String collate(STRING string as COLLATION collation)
+2025-10-05T20:14:24.599234477Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String concat(STRING string0[, STRING string1[, ...]])
+2025-10-05T20:14:24.599243100Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double cos(NUMERIC arg)
+2025-10-05T20:14:24.599250559Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double cosh(NUMERIC arg)
+2025-10-05T20:14:24.599260413Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double cot(NUMERIC arg)
+2025-10-05T20:14:24.599268732Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long count([distinct ]{arg|*})
+2025-10-05T20:14:24.599276204Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double cume_dist([arg0[, ...]])
+2025-10-05T20:14:24.599283818Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Date curdate()
+2025-10-05T20:14:24.599291510Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Date current date
+2025-10-05T20:14:24.599297847Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Time current time
+2025-10-05T20:14:24.599305117Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Timestamp current timestamp
+2025-10-05T20:14:24.599313224Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Date current_date
+2025-10-05T20:14:24.599320062Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Instant current_instant
+2025-10-05T20:14:24.599327790Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Time current_time
+2025-10-05T20:14:24.599334056Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Timestamp current_timestamp
+2025-10-05T20:14:24.599340185Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Time curtime()
+2025-10-05T20:14:24.599347424Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : date_trunc(STRING field, TEMPORAL datetime)
+2025-10-05T20:14:24.599354407Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : dateadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+2025-10-05T20:14:24.599360961Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long|Double datediff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+2025-10-05T20:14:24.599692906Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer day(DATE arg)
+2025-10-05T20:14:24.599702643Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer day_of_month(DATE arg)
+2025-10-05T20:14:24.599710063Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer day_of_week(DATE arg)
+2025-10-05T20:14:24.599717210Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer day_of_year(DATE arg)
+2025-10-05T20:14:24.599724998Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String dayname(DATE arg)
+2025-10-05T20:14:24.599733009Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double degrees(NUMERIC arg)
+2025-10-05T20:14:24.599739346Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long dense_rank([arg0[, ...]])
+2025-10-05T20:14:24.599749852Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Boolean every(BOOLEAN predicate)
+2025-10-05T20:14:24.599757394Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : lagANY value[, INTEGER offset[, ANY default]]
+2025-10-05T20:14:24.599758811Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double exp(NUMERIC arg)
+2025-10-05T20:14:24.599766725Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : extract(TEMPORAL_UNIT field from TEMPORAL arg)
+2025-10-05T20:14:24.599776678Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : last_valueANY value
+2025-10-05T20:14:24.599786379Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String listagg(STRING arg0, STRING arg1)
+2025-10-05T20:14:24.599788364Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : leadANY value[, INTEGER offset[, ANY default]]
+2025-10-05T20:14:24.599796069Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : LocalDateTime local datetime
+2025-10-05T20:14:24.599798385Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : least(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+2025-10-05T20:14:24.599799881Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double ln(NUMERIC arg)
+2025-10-05T20:14:24.599807857Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : LocalTime local time
+2025-10-05T20:14:24.599808306Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : LocalDate local date
+2025-10-05T20:14:24.599809023Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String left(STRING string, INTEGER length)
+2025-10-05T20:14:24.599815849Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : LocalDate local_date
+2025-10-05T20:14:24.599821179Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : length
+2025-10-05T20:14:24.599821265Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : max(COMPARABLE arg)
+2025-10-05T20:14:24.599830475Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double median(NUMERIC arg)
+2025-10-05T20:14:24.599834372Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : LocalDateTime local_datetime
+2025-10-05T20:14:24.599840531Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer microsecond(TIME arg)
+2025-10-05T20:14:24.599842927Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : first_valueANY value
+2025-10-05T20:14:24.599845880Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : LocalTime local_time
+2025-10-05T20:14:24.599850624Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : min(COMPARABLE arg)
+2025-10-05T20:14:24.599853706Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : floor(NUMERIC arg)
+2025-10-05T20:14:24.599855021Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Time localtime
+2025-10-05T20:14:24.599860712Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer minute(TIME arg)
+2025-10-05T20:14:24.599863930Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String format(TEMPORAL datetime as STRING pattern)
+2025-10-05T20:14:24.599865252Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Timestamp localtimestamp
+2025-10-05T20:14:24.599873072Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer mod(INTEGER arg0, INTEGER arg1)
+2025-10-05T20:14:24.599874111Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : greatest(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+2025-10-05T20:14:24.599876949Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer locate(STRING pattern, STRING string[, INTEGER start])
+2025-10-05T20:14:24.599884156Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer hour(TIME arg)
+2025-10-05T20:14:24.599886460Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double log(NUMERIC base, NUMERIC arg)
+2025-10-05T20:14:24.599888878Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : mode()
+2025-10-05T20:14:24.599894996Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double log10(NUMERIC arg)
+2025-10-05T20:14:24.599896780Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : ifnull(arg0, arg1)
+2025-10-05T20:14:24.599898502Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer month(DATE arg)
+2025-10-05T20:14:24.599903029Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String lower(STRING string)
+2025-10-05T20:14:24.599906651Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String monthname(DATE arg)
+2025-10-05T20:14:24.599910060Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String insert(STRING string, INTEGER start, INTEGER length, STRING replacement)
+2025-10-05T20:14:24.599912884Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String lpad(STRING string, INTEGER length[, STRING padding])
+2025-10-05T20:14:24.599918872Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Instant instant
+2025-10-05T20:14:24.599921270Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String ltrim(STRING string)
+2025-10-05T20:14:24.599926275Z [inf]  2025-10-05T20:14:24.593Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer instr(STRING string, STRING pattern[, INTEGER start[, INTEGER occurrence]])
+2025-10-05T20:14:24.599934969Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : OffsetDateTime offset_datetime
+2025-10-05T20:14:24.599935852Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Timestamp now()
+2025-10-05T20:14:24.599943926Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : nth_valueANY value, INTEGER nth
+2025-10-05T20:14:24.599944029Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String overlay(STRING string placing STRING replacement from INTEGER start[ for INTEGER length])
+2025-10-05T20:14:24.599945055Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String trim([[{leading|trailing|both} ][STRING arg0 ]from] STRING arg1)
+2025-10-05T20:14:24.599953264Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : nullif(arg0, arg1)
+2025-10-05T20:14:24.599955831Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String pad(STRING string with INTEGER length {leading|trailing}[ STRING character])
+2025-10-05T20:14:24.599956640Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : trunc( ... )
+2025-10-05T20:14:24.599963320Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer octet_length(STRING_OR_CLOB arg)
+2025-10-05T20:14:24.599967050Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double percent_rank([arg0[, ...]])
+2025-10-05T20:14:24.599967581Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : truncate( ... )
+2025-10-05T20:14:24.599970999Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : OffsetDateTime offset datetime
+2025-10-05T20:14:24.599976019Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String upper(STRING string)
+2025-10-05T20:14:24.599978010Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : percentile_cont(NUMERIC arg)
+2025-10-05T20:14:24.599986173Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : percentile_disc(NUMERIC arg)
+2025-10-05T20:14:24.599993746Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double pi
+2025-10-05T20:14:24.600000807Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer position(STRING pattern in STRING string)
+2025-10-05T20:14:24.600009306Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double power(NUMERIC arg0, NUMERIC arg1)
+2025-10-05T20:14:24.600017195Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer quarter(DATE arg)
+2025-10-05T20:14:24.600023412Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double radians(NUMERIC arg)
+2025-10-05T20:14:24.600029744Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double rand([INTEGER seed])
+2025-10-05T20:14:24.600036056Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long rank([arg0[, ...]])
+2025-10-05T20:14:24.600042003Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String repeat(STRING string, INTEGER times)
+2025-10-05T20:14:24.600049927Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String replace(STRING string, STRING pattern, STRING replacement)
+2025-10-05T20:14:24.600058680Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String right(STRING string, INTEGER length)
+2025-10-05T20:14:24.600065403Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : round(NUMERIC number[, INTEGER places])
+2025-10-05T20:14:24.600071445Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long row_number()
+2025-10-05T20:14:24.600077717Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long rownum()
+2025-10-05T20:14:24.600085055Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String rpad(STRING string, INTEGER length[, STRING padding])
+2025-10-05T20:14:24.600091724Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String rtrim(STRING string)
+2025-10-05T20:14:24.600099319Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer second(TIME arg)
+2025-10-05T20:14:24.600105936Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer sign(NUMERIC arg)
+2025-10-05T20:14:24.600112817Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double sin(NUMERIC arg)
+2025-10-05T20:14:24.600119414Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double sinh(NUMERIC arg)
+2025-10-05T20:14:24.600128659Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String soundex(arg)
+2025-10-05T20:14:24.600135345Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String space(INTEGER arg)
+2025-10-05T20:14:24.600142947Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : sql
+2025-10-05T20:14:24.600150196Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double sqrt(NUMERIC arg)
+2025-10-05T20:14:24.600157774Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double stddev_pop(NUMERIC arg)
+2025-10-05T20:14:24.600172065Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double stddev_samp(NUMERIC arg)
+2025-10-05T20:14:24.600182309Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String str(arg)
+2025-10-05T20:14:24.600193519Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String substr(STRING string, INTEGER start[, INTEGER length])
+2025-10-05T20:14:24.600202429Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String substring(STRING string{ from|,} INTEGER start[{ for|,} INTEGER length])
+2025-10-05T20:14:24.600210483Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : sum(arg)
+2025-10-05T20:14:24.600219171Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Timestamp sysdate
+2025-10-05T20:14:24.600227339Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double tan(NUMERIC arg)
+2025-10-05T20:14:24.600235752Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double tanh(NUMERIC arg)
+2025-10-05T20:14:24.600244136Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : timestampadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+2025-10-05T20:14:24.600252246Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Long|Double timestampdiff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+2025-10-05T20:14:24.600259297Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : String translate(STRING arg0, STRING arg1, STRING arg2)
+2025-10-05T20:14:24.600939393Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double var_pop(NUMERIC arg)
+2025-10-05T20:14:24.600949585Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Double var_samp(NUMERIC arg)
+2025-10-05T20:14:24.600957104Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer week(DATE arg)
+2025-10-05T20:14:24.600964339Z [inf]  2025-10-05T20:14:24.594Z DEBUG 1 --- [           main] org.hibernate.HQL_FUNCTIONS              : Integer year(DATE arg)
+2025-10-05T20:14:24.600972418Z [inf]  2025-10-05T20:14:24.597Z DEBUG 1 --- [           main] org.hibernate.orm.query.plan.cache       : Starting QueryInterpretationCache(2048)
+2025-10-05T20:14:24.678418303Z [inf]  2025-10-05T20:14:24.650Z DEBUG 1 --- [           main] .h.s.i.SessionFactoryServiceRegistryImpl : EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2025-10-05T20:14:24.678430246Z [inf]  2025-10-05T20:14:24.651Z DEBUG 1 --- [           main] h.e.i.EntityCopyObserverFactoryInitiator : Configured EntityCopyObserver strategy: disallow
+2025-10-05T20:14:24.715793584Z [inf]  2025-10-05T20:14:24.713Z DEBUG 1 --- [           main] org.hibernate.ormbytecode.interceptor    : To-one property `com.library.model.Transaction#book` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2025-10-05T20:14:24.719739458Z [inf]  2025-10-05T20:14:24.717Z DEBUG 1 --- [           main] org.hibernate.ormbytecode.interceptor    : To-one property `com.library.model.Transaction#book` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2025-10-05T20:14:24.723200399Z [inf]  2025-10-05T20:14:24.720Z DEBUG 1 --- [           main] org.hibernate.ormbytecode.interceptor    : To-one property `com.library.model.Transaction#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2025-10-05T20:14:24.723208971Z [inf]  2025-10-05T20:14:24.720Z DEBUG 1 --- [           main] org.hibernate.ormbytecode.interceptor    : To-one property `com.library.model.Transaction#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2025-10-05T20:14:24.723215535Z [inf]  2025-10-05T20:14:24.720Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.library.model.Transaction] is safe
+2025-10-05T20:14:24.723221897Z [inf]  2025-10-05T20:14:24.720Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.library.model.Transaction
+2025-10-05T20:14:24.877219855Z [inf]  2025-10-05T20:14:24.845Z DEBUG 1 --- [           main] o.h.b.i.bytebuddy.BytecodeProviderImpl   : HHH000513: Unable to create the ReflectionOptimizer for [com.library.model.Transaction]: private accessor [book]
+2025-10-05T20:14:24.877224644Z [inf]  2025-10-05T20:14:24.848Z DEBUG 1 --- [           main] org.hibernate.ormbytecode.interceptor    : To-one property `com.library.model.Transaction#book` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2025-10-05T20:14:24.877229140Z [inf]  2025-10-05T20:14:24.849Z DEBUG 1 --- [           main] org.hibernate.ormbytecode.interceptor    : To-one property `com.library.model.Transaction#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2025-10-05T20:14:24.877234076Z [inf]  2025-10-05T20:14:24.865Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.library.model.Book] is safe
+2025-10-05T20:14:24.877238620Z [inf]  2025-10-05T20:14:24.865Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.library.model.Book
+2025-10-05T20:14:24.895877583Z [inf]  2025-10-05T20:14:24.888Z DEBUG 1 --- [           main] o.h.b.i.bytebuddy.BytecodeProviderImpl   : HHH000513: Unable to create the ReflectionOptimizer for [com.library.model.Book]: private accessor [author]
+2025-10-05T20:14:24.895882152Z [inf]  2025-10-05T20:14:24.889Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.library.model.User] is safe
+2025-10-05T20:14:24.895886557Z [inf]  2025-10-05T20:14:24.889Z DEBUG 1 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.library.model.User
+2025-10-05T20:14:24.928820693Z [inf]  2025-10-05T20:14:24.911Z DEBUG 1 --- [           main] o.h.b.i.bytebuddy.BytecodeProviderImpl   : HHH000513: Unable to create the ReflectionOptimizer for [com.library.model.User]: private accessor [accountNonExpired]
+2025-10-05T20:14:24.932018322Z [inf]  2025-10-05T20:14:24.928Z DEBUG 1 --- [           main] o.hibernate.orm.model.mapping.creation   : Starting post-init callbacks
+2025-10-05T20:14:24.932023307Z [inf]  2025-10-05T20:14:24.928Z DEBUG 1 --- [           main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : To-one key - NavigableRole[com.library.model.Transaction.book]
+2025-10-05T20:14:24.935200888Z [inf]  2025-10-05T20:14:24.931Z DEBUG 1 --- [           main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : To-one key - NavigableRole[com.library.model.Transaction.user]
+2025-10-05T20:14:24.935207271Z [inf]  2025-10-05T20:14:24.931Z DEBUG 1 --- [           main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.library.model.Transaction) `staticFetchableList` generator
+2025-10-05T20:14:24.935213068Z [inf]  2025-10-05T20:14:24.931Z DEBUG 1 --- [           main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.library.model.Book) `staticFetchableList` generator
+2025-10-05T20:14:24.935218735Z [inf]  2025-10-05T20:14:24.931Z DEBUG 1 --- [           main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.library.model.User) `staticFetchableList` generator
+2025-10-05T20:14:24.990718499Z [inf]  2025-10-05T20:14:24.990Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : t1_0
+2025-10-05T20:14:24.994494909Z [inf]  2025-10-05T20:14:24.991Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.library.model.Transaction)] with identifierForTableGroup [com.library.model.Transaction] for NavigablePath [com.library.model.Transaction] 
+2025-10-05T20:14:25.002683537Z [inf]  2025-10-05T20:14:24.999Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4797023d] with identifierForTableGroup [com.library.model.Transaction.book] for NavigablePath [com.library.model.Transaction.book] 
+2025-10-05T20:14:25.002694990Z [inf]  2025-10-05T20:14:25.001Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : b1_0
+2025-10-05T20:14:25.006747469Z [inf]  2025-10-05T20:14:25.004Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@3506bc8b] with identifierForTableGroup [com.library.model.Transaction.user] for NavigablePath [com.library.model.Transaction.user] 
+2025-10-05T20:14:25.006755812Z [inf]  2025-10-05T20:14:25.004Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
+2025-10-05T20:14:25.011437707Z [inf]  2025-10-05T20:14:25.008Z DEBUG 1 --- [           main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+2025-10-05T20:14:25.011446252Z [inf]   \-EntityResultImpl [com.library.model.Transaction]
+2025-10-05T20:14:25.011452081Z [inf]   |  +-EntityFetchJoinedImpl [com.library.model.Transaction.book]
+2025-10-05T20:14:25.011457613Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.author]
+2025-10-05T20:14:25.011465546Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.availableCopies]
+2025-10-05T20:14:25.011471137Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.category]
+2025-10-05T20:14:25.011477259Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.createdAt]
+2025-10-05T20:14:25.011483151Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.description]
+2025-10-05T20:14:25.011488435Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.isbn]
+2025-10-05T20:14:25.011493832Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.publicationYear]
+2025-10-05T20:14:25.011499459Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.publisher]
+2025-10-05T20:14:25.011505734Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.title]
+2025-10-05T20:14:25.011512951Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.book.totalCopies]
+2025-10-05T20:14:25.011518328Z [inf]   |  |  \-BasicFetch [com.library.model.Transaction.book.updatedAt]
+2025-10-05T20:14:25.011524737Z [inf]   |  +-BasicFetch [com.library.model.Transaction.dueDate]
+2025-10-05T20:14:25.011530108Z [inf]   |  +-BasicFetch [com.library.model.Transaction.fine]
+2025-10-05T20:14:25.011534891Z [inf]   |  +-BasicFetch [com.library.model.Transaction.returnDate]
+2025-10-05T20:14:25.011539847Z [inf]   |  +-BasicFetch [com.library.model.Transaction.status]
+2025-10-05T20:14:25.011543720Z [inf]   |  +-BasicFetch [com.library.model.Transaction.transactionDate]
+2025-10-05T20:14:25.011548069Z [inf]   |  +-BasicFetch [com.library.model.Transaction.transactionType]
+2025-10-05T20:14:25.011552051Z [inf]   |  \-EntityFetchJoinedImpl [com.library.model.Transaction.user]
+2025-10-05T20:14:25.011556107Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.accountNonExpired]
+2025-10-05T20:14:25.011560932Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.accountNonLocked]
+2025-10-05T20:14:25.011565999Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.credentialsNonExpired]
+2025-10-05T20:14:25.011570082Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.email]
+2025-10-05T20:14:25.011574413Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.enabled]
+2025-10-05T20:14:25.011578359Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.fullName]
+2025-10-05T20:14:25.011582315Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.password]
+2025-10-05T20:14:25.011586870Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.phoneNumber]
+2025-10-05T20:14:25.011591377Z [inf]   |  |  +-BasicFetch [com.library.model.Transaction.user.role]
+2025-10-05T20:14:25.011595139Z [inf]   |  |  \-BasicFetch [com.library.model.Transaction.user.username]
+2025-10-05T20:14:25.011599006Z [inf]  
+2025-10-05T20:14:25.015997820Z [inf]  2025-10-05T20:14:25.011Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+2025-10-05T20:14:25.016006170Z [inf]      SelectStatement {
+2025-10-05T20:14:25.016010908Z [inf]        FromClause {
+2025-10-05T20:14:25.016016359Z [inf]          StandardTableGroup (t1 : com.library.model.Transaction) {
+2025-10-05T20:14:25.016021982Z [inf]            primaryTableReference : transactions as t1_0
+2025-10-05T20:14:25.016030075Z [inf]            TableGroupJoins {
+2025-10-05T20:14:25.016035049Z [inf]               join LazyTableGroup (b1 : com.library.model.Transaction.book) {
+2025-10-05T20:14:25.016039448Z [inf]                primaryTableReference : books as b1_0
+2025-10-05T20:14:25.016043898Z [inf]              }
+2025-10-05T20:14:25.016048794Z [inf]               join LazyTableGroup (u1 : com.library.model.Transaction.user) {
+2025-10-05T20:14:25.016052894Z [inf]                primaryTableReference : users as u1_0
+2025-10-05T20:14:25.016057459Z [inf]              }
+2025-10-05T20:14:25.016062715Z [inf]            }
+2025-10-05T20:14:25.016067302Z [inf]          }
+2025-10-05T20:14:25.016071344Z [inf]        }
+2025-10-05T20:14:25.016075334Z [inf]      }
+2025-10-05T20:14:25.016079492Z [inf]  
+2025-10-05T20:14:25.019289485Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: com.library.model.Transaction
+2025-10-05T20:14:25.019296380Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Version select: select id from transactions where id=?
+2025-10-05T20:14:25.019301580Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Insert (0): insert into transactions (book_id,due_date,fine,return_date,status,transaction_date,transaction_type,user_id,id) values (?,?,?,?,?,?,?,?,default)
+2025-10-05T20:14:25.019306768Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update transactions set book_id=?,due_date=?,fine=?,return_date=?,status=?,transaction_date=?,transaction_type=?,user_id=? where id=?
+2025-10-05T20:14:25.019312205Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from transactions where id=?
+2025-10-05T20:14:25.019317230Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : b1_0
+2025-10-05T20:14:25.019323397Z [inf]  2025-10-05T20:14:25.018Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.library.model.Book)] with identifierForTableGroup [com.library.model.Book] for NavigablePath [com.library.model.Book] 
+2025-10-05T20:14:25.023252032Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+2025-10-05T20:14:25.023257828Z [inf]   \-EntityResultImpl [com.library.model.Book]
+2025-10-05T20:14:25.023262313Z [inf]   |  +-BasicFetch [com.library.model.Book.author]
+2025-10-05T20:14:25.023267780Z [inf]   |  +-BasicFetch [com.library.model.Book.availableCopies]
+2025-10-05T20:14:25.023272785Z [inf]   |  +-BasicFetch [com.library.model.Book.category]
+2025-10-05T20:14:25.023278178Z [inf]   |  +-BasicFetch [com.library.model.Book.createdAt]
+2025-10-05T20:14:25.023283336Z [inf]   |  +-BasicFetch [com.library.model.Book.description]
+2025-10-05T20:14:25.023287765Z [inf]   |  +-BasicFetch [com.library.model.Book.isbn]
+2025-10-05T20:14:25.023292432Z [inf]   |  +-BasicFetch [com.library.model.Book.publicationYear]
+2025-10-05T20:14:25.023297335Z [inf]   |  +-BasicFetch [com.library.model.Book.publisher]
+2025-10-05T20:14:25.023302871Z [inf]   |  +-BasicFetch [com.library.model.Book.title]
+2025-10-05T20:14:25.023306715Z [inf]   |  +-BasicFetch [com.library.model.Book.totalCopies]
+2025-10-05T20:14:25.023310431Z [inf]   |  \-BasicFetch [com.library.model.Book.updatedAt]
+2025-10-05T20:14:25.023315019Z [inf]  
+2025-10-05T20:14:25.023319593Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+2025-10-05T20:14:25.023323803Z [inf]      SelectStatement {
+2025-10-05T20:14:25.023328022Z [inf]        FromClause {
+2025-10-05T20:14:25.023332243Z [inf]          StandardTableGroup (b1 : com.library.model.Book) {
+2025-10-05T20:14:25.023336944Z [inf]            primaryTableReference : books as b1_0
+2025-10-05T20:14:25.023341658Z [inf]          }
+2025-10-05T20:14:25.023345589Z [inf]        }
+2025-10-05T20:14:25.023349665Z [inf]      }
+2025-10-05T20:14:25.023353614Z [inf]  
+2025-10-05T20:14:25.023358933Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: com.library.model.Book
+2025-10-05T20:14:25.023368234Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Version select: select id from books where id=?
+2025-10-05T20:14:25.023372194Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Insert (0): insert into books (author,available_copies,category,created_at,description,isbn,publication_year,publisher,title,total_copies,updated_at,id) values (?,?,?,?,?,?,?,?,?,?,?,default)
+2025-10-05T20:14:25.023376125Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update books set author=?,available_copies=?,category=?,created_at=?,description=?,isbn=?,publication_year=?,publisher=?,title=?,total_copies=?,updated_at=? where id=?
+2025-10-05T20:14:25.023380311Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from books where id=?
+2025-10-05T20:14:25.023384369Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
+2025-10-05T20:14:25.023388620Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.library.model.User)] with identifierForTableGroup [com.library.model.User] for NavigablePath [com.library.model.User] 
+2025-10-05T20:14:25.023392531Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+2025-10-05T20:14:25.023396798Z [inf]   \-EntityResultImpl [com.library.model.User]
+2025-10-05T20:14:25.023400861Z [inf]   |  +-BasicFetch [com.library.model.User.accountNonExpired]
+2025-10-05T20:14:25.023404903Z [inf]   |  +-BasicFetch [com.library.model.User.accountNonLocked]
+2025-10-05T20:14:25.023413805Z [inf]   |  +-BasicFetch [com.library.model.User.credentialsNonExpired]
+2025-10-05T20:14:25.023417700Z [inf]   |  +-BasicFetch [com.library.model.User.email]
+2025-10-05T20:14:25.023421646Z [inf]   |  +-BasicFetch [com.library.model.User.enabled]
+2025-10-05T20:14:25.023425939Z [inf]   |  +-BasicFetch [com.library.model.User.fullName]
+2025-10-05T20:14:25.023429924Z [inf]   |  +-BasicFetch [com.library.model.User.password]
+2025-10-05T20:14:25.023433811Z [inf]   |  +-BasicFetch [com.library.model.User.phoneNumber]
+2025-10-05T20:14:25.023439540Z [inf]   |  +-BasicFetch [com.library.model.User.role]
+2025-10-05T20:14:25.023446275Z [inf]   |  \-BasicFetch [com.library.model.User.username]
+2025-10-05T20:14:25.023450353Z [inf]  
+2025-10-05T20:14:25.023455744Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+2025-10-05T20:14:25.023459715Z [inf]      SelectStatement {
+2025-10-05T20:14:25.023465642Z [inf]        FromClause {
+2025-10-05T20:14:25.023469329Z [inf]          StandardTableGroup (u1 : com.library.model.User) {
+2025-10-05T20:14:25.023473500Z [inf]            primaryTableReference : users as u1_0
+2025-10-05T20:14:25.023477510Z [inf]          }
+2025-10-05T20:14:25.023481377Z [inf]        }
+2025-10-05T20:14:25.023488776Z [inf]      }
+2025-10-05T20:14:25.023492509Z [inf]  
+2025-10-05T20:14:25.023497872Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: com.library.model.User
+2025-10-05T20:14:25.023502036Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Version select: select id from users where id=?
+2025-10-05T20:14:25.023511316Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Insert (0): insert into users (account_non_expired,account_non_locked,credentials_non_expired,email,enabled,full_name,password,phone_number,role,username,id) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-10-05T20:14:25.024116700Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update users set account_non_expired=?,account_non_locked=?,credentials_non_expired=?,email=?,enabled=?,full_name=?,password=?,phone_number=?,role=?,username=? where id=?
+2025-10-05T20:14:25.024121239Z [inf]  2025-10-05T20:14:25.019Z DEBUG 1 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from users where id=?
+2025-10-05T20:14:25.071376980Z [inf]  2025-10-05T20:14:25.066Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-05T20:14:25.071385838Z [inf]  2025-10-05T20:14:25.066Z DEBUG 1 --- [           main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@d76099a] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@16732340]
+2025-10-05T20:14:25.071390515Z [inf]  2025-10-05T20:14:25.067Z DEBUG 1 --- [           main] o.h.query.named.NamedObjectRepository    : Checking 0 named HQL queries
+2025-10-05T20:14:25.071397601Z [inf]  2025-10-05T20:14:25.067Z DEBUG 1 --- [           main] o.h.query.named.NamedObjectRepository    : Checking 0 named SQL queries
+2025-10-05T20:14:25.079417354Z [inf]  2025-10-05T20:14:25.078Z DEBUG 1 --- [           main] org.hibernate.SQL                        : drop table if exists books cascade 
+2025-10-05T20:14:25.095915427Z [inf]  2025-10-05T20:14:25.094Z DEBUG 1 --- [           main] org.hibernate.SQL                        : drop table if exists transactions cascade 
+2025-10-05T20:14:25.095921560Z [inf]  2025-10-05T20:14:25.094Z DEBUG 1 --- [           main] org.hibernate.SQL                        : drop table if exists users cascade 
+2025-10-05T20:14:25.104143931Z [inf]  2025-10-05T20:14:25.100Z DEBUG 1 --- [           main] org.hibernate.SQL                        : create table books (available_copies integer check (available_copies>=0), publication_year integer not null, total_copies integer not null check (total_copies>=1), created_at timestamp(6), id bigint generated by default as identity, updated_at timestamp(6), author varchar(255) not null, category varchar(255), description varchar(255), isbn varchar(255) not null unique, publisher varchar(255), title varchar(255) not null, primary key (id))
+2025-10-05T20:14:25.154536087Z [inf]  2025-10-05T20:14:25.140Z DEBUG 1 --- [           main] org.hibernate.SQL                        : create table transactions (fine float(53), book_id bigint not null, due_date timestamp(6), id bigint generated by default as identity, return_date timestamp(6), transaction_date timestamp(6), user_id bigint not null, status enum ('ACTIVE','OVERDUE','RETURNED'), transaction_type enum ('BORROW','RETURN'), primary key (id))
+2025-10-05T20:14:25.154541692Z [inf]  2025-10-05T20:14:25.149Z DEBUG 1 --- [           main] org.hibernate.SQL                        : create table users (account_non_expired boolean not null, account_non_locked boolean not null, credentials_non_expired boolean not null, enabled boolean not null, id bigint generated by default as identity, email varchar(255) not null unique, full_name varchar(255) not null, password varchar(255) not null, phone_number varchar(255), username varchar(255) not null unique, role enum ('LIBRARIAN','MEMBER') not null, primary key (id))
+2025-10-05T20:14:25.154546959Z [inf]  2025-10-05T20:14:25.152Z DEBUG 1 --- [           main] org.hibernate.SQL                        : alter table if exists transactions add constraint FKhwis5rd79vrejvuuuc513px7a foreign key (book_id) references books
+2025-10-05T20:14:25.175050247Z [inf]  2025-10-05T20:14:25.165Z DEBUG 1 --- [           main] org.hibernate.SQL                        : alter table if exists transactions add constraint FKqwv7rmvc8va8rep7piikrojds foreign key (user_id) references users
+2025-10-05T20:14:25.175056831Z [inf]  2025-10-05T20:14:25.172Z DEBUG 1 --- [           main] o.h.internal.SessionFactoryRegistry      : Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@10cb5047
+2025-10-05T20:14:25.175063264Z [inf]  2025-10-05T20:14:25.172Z DEBUG 1 --- [           main] o.h.internal.SessionFactoryRegistry      : Registering SessionFactory: ca53daba-6ef1-4469-97e0-1d1e45c91389 (<unnamed>)
+2025-10-05T20:14:25.175069345Z [inf]  2025-10-05T20:14:25.172Z DEBUG 1 --- [           main] o.h.internal.SessionFactoryRegistry      : Not binding SessionFactory to JNDI, no JNDI name configured
+2025-10-05T20:14:25.175075108Z [inf]  2025-10-05T20:14:25.172Z DEBUG 1 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Instantiated SessionFactory
+2025-10-05T20:14:25.175086149Z [inf]  2025-10-05T20:14:25.172Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-05T20:14:25.859661341Z [inf]  2025-10-05T20:14:25.857Z DEBUG 1 --- [           main] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2025-10-05T20:14:25.869498201Z [inf]  2025-10-05T20:14:25.864Z DEBUG 1 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+2025-10-05T20:14:25.869509089Z [inf]  
+2025-10-05T20:14:25.869515354Z [inf]  java.lang.Exception: exception just for purpose of providing stack trace
+2025-10-05T20:14:25.869521284Z [inf]  	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:309) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:25.869527844Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1141) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:25.869533585Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:1019) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:25.869539097Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:143) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:25.869546436Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:25.869551612Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:25.869565000Z [inf]  	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869570517Z [inf]  	at jdk.proxy2/jdk.proxy2.$Proxy134.createNamedQuery(Unknown Source) ~[na:na]
+2025-10-05T20:14:25.869576098Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:120) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869581456Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:147) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869586566Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:184) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869592027Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869597872Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869603145Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869608645Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869614502Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869619778Z [inf]  	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+2025-10-05T20:14:25.869626707Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869634352Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869640328Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869645999Z [inf]  	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869652124Z [inf]  	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869657044Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869662394Z [inf]  	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:25.869669092Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869704945Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869727231Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869733489Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869738939Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869744569Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869751939Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869757222Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869763095Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869768995Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869775592Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869783438Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869789567Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869797883Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869848006Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.869856119Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870347258Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870352842Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870357199Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870361420Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870365932Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870370769Z [inf]  	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870374972Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870379027Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870383368Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870387311Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870391214Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870394908Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870398853Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870402990Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870406806Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870410678Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870415069Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870419094Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870423584Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870428966Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870433475Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870438145Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870442342Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870446730Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870452968Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870458011Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870462170Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870466535Z [inf]  	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870470962Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870477023Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870483035Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870489021Z [inf]  	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+2025-10-05T20:14:25.870496607Z [inf]  	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870502979Z [inf]  	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+2025-10-05T20:14:25.870508284Z [inf]  	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870513279Z [inf]  	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:773) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870518432Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870524217Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870529018Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870536588Z [inf]  	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+2025-10-05T20:14:25.870541435Z [inf]  	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870546761Z [inf]  	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+2025-10-05T20:14:25.870552871Z [inf]  	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870557968Z [inf]  	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870563405Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870570105Z [inf]  	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870577101Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870586840Z [inf]  	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870592705Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870599091Z [inf]  	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:25.870605171Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870610826Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870619051Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870624832Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870629850Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870638397Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870645632Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:25.870650970Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870656448Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870663656Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870670438Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870677998Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870682676Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:25.870688039Z [inf]  	at com.library.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+2025-10-05T20:14:25.870693102Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:25.870700540Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:25.870705580Z [inf]  	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:25.870712660Z [inf]  	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:25.870717639Z [inf]  	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:25.870722812Z [inf]  
+2025-10-05T20:14:26.044048885Z [inf]  2025-10-05T20:14:26.039Z DEBUG 1 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+2025-10-05T20:14:26.044058207Z [inf]  
+2025-10-05T20:14:26.044065085Z [inf]  java.lang.Exception: exception just for purpose of providing stack trace
+2025-10-05T20:14:26.044073137Z [inf]  	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:309) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.044079851Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1141) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.044086870Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:1019) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.044092605Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:143) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.044098763Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:26.044106308Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:26.044126704Z [inf]  	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044133946Z [inf]  	at jdk.proxy2/jdk.proxy2.$Proxy134.createNamedQuery(Unknown Source) ~[na:na]
+2025-10-05T20:14:26.044140672Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:120) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044148503Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:147) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044154509Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:184) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044160803Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044167800Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044173892Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044180081Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044186034Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044191673Z [inf]  	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+2025-10-05T20:14:26.044200612Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044206466Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044215091Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044220356Z [inf]  	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044227460Z [inf]  	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044233196Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044239304Z [inf]  	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.044246307Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044252416Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044260855Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044267340Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044273518Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044281331Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044288028Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044295589Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044302591Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044309570Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044316707Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044323373Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044329651Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044336037Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044342579Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044348498Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044355387Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044362166Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044372196Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044380185Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044385929Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044392839Z [inf]  	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044400374Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044407025Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044413162Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044418994Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044894124Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044900512Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044906046Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044911907Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044917255Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044923055Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044928507Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044934071Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044940499Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.044946269Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044952038Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044957269Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044962999Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044968488Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044974323Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044980870Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044986516Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.044991855Z [inf]  	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.044998057Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045004276Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045009607Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045015368Z [inf]  	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+2025-10-05T20:14:26.045020919Z [inf]  	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045029451Z [inf]  	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+2025-10-05T20:14:26.045036626Z [inf]  	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045042314Z [inf]  	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:773) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045049864Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045055666Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045061551Z [inf]  	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045066760Z [inf]  	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+2025-10-05T20:14:26.045073705Z [inf]  	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045079489Z [inf]  	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+2025-10-05T20:14:26.045087596Z [inf]  	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045094531Z [inf]  	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045100137Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045105695Z [inf]  	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045111156Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045116694Z [inf]  	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045122133Z [inf]  	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045127880Z [inf]  	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.46.jar!/:na]
+2025-10-05T20:14:26.045135640Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045142125Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045149372Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045155230Z [inf]  	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045160377Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045165569Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045171311Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.045177550Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045182690Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045189653Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045196781Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045202807Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045208364Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.045214126Z [inf]  	at com.library.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.045220125Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:26.045226150Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:26.045231408Z [inf]  	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.045236460Z [inf]  	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.045243048Z [inf]  	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.045248610Z [inf]  
+2025-10-05T20:14:26.049021350Z [inf]  2025-10-05T20:14:26.042Z DEBUG 1 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+2025-10-05T20:14:26.049029111Z [inf]  
+2025-10-05T20:14:26.049035921Z [inf]  java.lang.Exception: exception just for purpose of providing stack trace
+2025-10-05T20:14:26.049041251Z [inf]  	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:309) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.049046435Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1141) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.049052302Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:1019) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.049057834Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:143) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.049063564Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:26.049069354Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:26.049074555Z [inf]  	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049081565Z [inf]  	at jdk.proxy2/jdk.proxy2.$Proxy134.createNamedQuery(Unknown Source) ~[na:na]
+2025-10-05T20:14:26.049087386Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:120) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049092902Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:147) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049098728Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:184) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049105143Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049110716Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049117842Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049123613Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049129233Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049135050Z [inf]  	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+2025-10-05T20:14:26.049140397Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049146816Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049152550Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049163831Z [inf]  	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049169218Z [inf]  	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049174720Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049179990Z [inf]  	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.049185950Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049191389Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049196779Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049204489Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049211959Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049217061Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049222535Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049227887Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049233671Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049239020Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049245721Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049251250Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049257556Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049262875Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049602822Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049610983Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049615255Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049620395Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049625434Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049630414Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049636628Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049641363Z [inf]  	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049645971Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1760) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049651141Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049656017Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049661016Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049665946Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049670424Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049674991Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049711871Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049718350Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049725531Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049732082Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049737978Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049743989Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.049749745Z [inf]  	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.452479088Z [inf]  2025-10-05T20:14:26.450Z  INFO 1 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-05T20:14:26.563483112Z [inf]  2025-10-05T20:14:26.544Z DEBUG 1 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+2025-10-05T20:14:26.563492906Z [inf]  
+2025-10-05T20:14:26.563499825Z [inf]  java.lang.Exception: exception just for purpose of providing stack trace
+2025-10-05T20:14:26.563510082Z [inf]  	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:309) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.563515478Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1141) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.563521275Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:1019) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.563526727Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:143) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.563532087Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:26.563537581Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:26.563543428Z [inf]  	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563550907Z [inf]  	at jdk.proxy2/jdk.proxy2.$Proxy134.createNamedQuery(Unknown Source) ~[na:na]
+2025-10-05T20:14:26.563556943Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:120) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563562193Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:147) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563568874Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:184) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563571081Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563575910Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563582804Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563582974Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563590710Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563591898Z [inf]  	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563602119Z [inf]  	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563602321Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563609765Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563611168Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563619344Z [inf]  	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+2025-10-05T20:14:26.563619734Z [inf]  	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563628372Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563628385Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563628604Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563635567Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563638029Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563641497Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563641904Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563646224Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563649662Z [inf]  	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563655422Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563659055Z [inf]  	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563664551Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563669206Z [inf]  	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563673238Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563676941Z [inf]  	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.563681173Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563685143Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563688838Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563695589Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563708124Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563717209Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563796649Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563802943Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563809317Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563814852Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563821276Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563827334Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563833976Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563839793Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563847059Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563854338Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563861993Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563867735Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563874183Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563880699Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563886964Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563894070Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563899721Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563909922Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563916023Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563922350Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563928341Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563934282Z [inf]  	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563940023Z [inf]  	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563945953Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563951296Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563957350Z [inf]  	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563964512Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563969985Z [inf]  	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563975408Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563985384Z [inf]  	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563990644Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.563996246Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.564006540Z [inf]  	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.564011968Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.564017905Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.564023320Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.564029344Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.564034431Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.564039808Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.564044963Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.564049787Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar!/:3.5.6]
+2025-10-05T20:14:26.564053929Z [inf]  	at com.library.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.564058169Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:26.564062674Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:26.564067299Z [inf]  	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.564071838Z [inf]  	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.564077332Z [inf]  	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[library-management-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2025-10-05T20:14:26.564081624Z [inf]  
+2025-10-05T20:14:26.564085715Z [inf]  2025-10-05T20:14:26.546Z DEBUG 1 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+2025-10-05T20:14:26.564090447Z [inf]  
+2025-10-05T20:14:26.564100258Z [inf]  java.lang.Exception: exception just for purpose of providing stack trace
+2025-10-05T20:14:26.564105094Z [inf]  	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:309) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.564109422Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.buildNamedQuery(AbstractSharedSessionContract.java:1141) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.564113570Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:1019) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.564117697Z [inf]  	at org.hibernate.internal.AbstractSharedSessionContract.createNamedQuery(AbstractSharedSessionContract.java:143) ~[hibernate-core-6.6.29.Final.jar!/:6.6.29.Final]
+2025-10-05T20:14:26.564123693Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2025-10-05T20:14:26.564128380Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2025-10-05T20:14:26.564134407Z [inf]  	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.2.11.jar!/:6.2.11]
+2025-10-05T20:14:26.564139803Z [inf]  	at jdk.proxy2/jdk.proxy2.$Proxy134.createNamedQuery(Unknown Source) ~[na:na]
+2025-10-05T20:14:26.564144803Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.hasNamedQuery(NamedQuery.java:120) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564150350Z [inf]  	at org.springframework.data.jpa.repository.query.NamedQuery.lookupFrom(NamedQuery.java:147) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564155271Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:184) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564160422Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564165361Z [inf]  	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99) ~[spring-data-jpa-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564173844Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564178562Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564186741Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.564191498Z [inf]  	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+2025-10-05T20:14:26.564197283Z [inf]  	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92) ~[spring-data-commons-3.5.4.jar!/:3.5.4]
+2025-10-05T20:14:26.780827051Z [inf]  2025-10-05T20:14:26.746Z DEBUG 1 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+2025-10-05T20:14:27.855378257Z [inf]  2025-10-05T20:14:27.851Z DEBUG 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-05T20:14:28.565584836Z [inf]  2025-10-05T20:14:28.562Z DEBUG 1 --- [           main] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2025-10-05T20:14:28.650774634Z [inf]  2025-10-05T20:14:28.637Z DEBUG 1 --- [           main] o.h.v.i.e.AbstractConfigurationImpl      : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2025-10-05T20:14:28.650780008Z [inf]  2025-10-05T20:14:28.637Z DEBUG 1 --- [           main] o.h.v.i.e.AbstractConfigurationImpl      : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2025-10-05T20:14:28.650791950Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2025-10-05T20:14:28.650797862Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2025-10-05T20:14:28.650804768Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2025-10-05T20:14:28.650810095Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2025-10-05T20:14:28.650816221Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2025-10-05T20:14:28.650822190Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.e.resolver.TraversableResolvers  : Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2025-10-05T20:14:28.650827089Z [inf]  2025-10-05T20:14:28.639Z DEBUG 1 --- [           main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2025-10-05T20:14:28.650859451Z [inf]  2025-10-05T20:14:28.640Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2025-10-05T20:14:28.650864843Z [inf]  2025-10-05T20:14:28.640Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2025-10-05T20:14:28.650871579Z [inf]  2025-10-05T20:14:28.640Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2025-10-05T20:14:28.650876876Z [inf]  2025-10-05T20:14:28.640Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2025-10-05T20:14:28.650881457Z [inf]  2025-10-05T20:14:28.640Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2025-10-05T20:14:28.650885871Z [inf]  2025-10-05T20:14:28.640Z DEBUG 1 --- [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2025-10-05T20:14:28.768574485Z [inf]  2025-10-05T20:14:28.758Z DEBUG 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-05T20:14:28.944107471Z [inf]  2025-10-05T20:14:28.942Z DEBUG 1 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-05T20:14:29.279853166Z [inf]  2025-10-05T20:14:29.277Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-05T20:14:29.367310176Z [inf]  2025-10-05T20:14:29.346Z  INFO 1 --- [           main] c.l.LibraryManagementSystemApplication   : Started LibraryManagementSystemApplication in 12.15 seconds (process running for 13.091)
+2025-10-05T20:14:40.686677667Z [err]  Railway rate limit of 500 logs/sec reached for replica, update your application to reduce the logging rate. Messages dropped: 678
