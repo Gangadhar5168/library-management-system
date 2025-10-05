@@ -1,0 +1,8 @@
+{
+  "build": {
+    "command": "mvn clean package -DskipTests"
+  },
+  "start": {
+    "command": "java -Dspring.profiles.active=prod -jar target/*.jar"
+  }
+}
