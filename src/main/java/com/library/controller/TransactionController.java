@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,68 +19,65 @@ import com.library.service.TransactionService;
 
 @RestController
 @RequestMapping("/api/transactions")
-public class TransactionController  {
-
+@CrossOrigin(origins = "*")
+public class TransactionController {
+    
     @Autowired
     private TransactionService transactionService;
-
-    // Borrow a book
+    
+    // Both LIBRARIAN and MEMBER can borrow books
     @PostMapping("/borrow")
-    public ResponseEntity<?> borrowBook(@RequestParam Long userId, @RequestParam Long bookId){
-        try {
-            Transaction transaction  = transactionService.borrowBook(userId, bookId);
-            return new ResponseEntity<>(transaction,HttpStatus.CREATED);
-        }
-        catch(RuntimeException e){
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
-        }
-    }
-
-    //Return a boook
-    @PostMapping("/return")
-    public ResponseEntity<?> returnBook(@RequestParam Long userId, @RequestParam Long bookId){
-        try {
-            Transaction transaction = transactionService.returnBook(userId, bookId);
-            return new ResponseEntity<>(transaction,HttpStatus.OK);
-        }
-        catch (RuntimeException e){
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
-        }
+    @PreAuthorize("hasRole('LIBRARIAN') or hasRole('MEMBER')")
+    public ResponseEntity<Transaction> borrowBook(@RequestParam Long userId, @RequestParam Long bookId) {
+        Transaction transaction = transactionService.borrowBook(userId, bookId); // Matches your service method
+        return new ResponseEntity<>(transaction, HttpStatus.CREATED);
     }
     
-    //Get all transactions
+    // Both LIBRARIAN and MEMBER can return books
+    @PostMapping("/return")
+    @PreAuthorize("hasRole('LIBRARIAN') or hasRole('MEMBER')")
+    public ResponseEntity<Transaction> returnBook(@RequestParam Long userId, @RequestParam Long bookId) {
+        Transaction transaction = transactionService.returnBook(userId, bookId); // Matches your service method
+        return ResponseEntity.ok(transaction);
+    }
+    
+    // Only LIBRARIAN can view all transactions
     @GetMapping
-    public ResponseEntity<List<Transaction>> getAllTransactions(){
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<List<Transaction>> getAllTransactions() {
         List<Transaction> transactions = transactionService.getAllTransactions();
-        return new ResponseEntity<>(transactions,HttpStatus.OK);
+        return ResponseEntity.ok(transactions);
     }
-
-    //Get user's transactions
+    
+    // LIBRARIAN can view any user's transactions, MEMBER can only view their own
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Transaction>> getUserTransactions(@PathVariable Long userId){
-        List<Transaction> transactions = transactionService.getUserTransactions(userId);
-        return new ResponseEntity<>(transactions,HttpStatus.OK);
+    @PreAuthorize("hasRole('LIBRARIAN') or (hasRole('MEMBER') and #userId == authentication.principal.id)")
+    public ResponseEntity<List<Transaction>> getUserTransactions(@PathVariable Long userId) {
+        List<Transaction> transactions = transactionService.getUserTransactions(userId); // Matches your service method
+        return ResponseEntity.ok(transactions);
     }
-
-    //Get Book's transactions history
+    
+    // Get book's transaction history - LIBRARIAN only
     @GetMapping("/book/{bookId}")
-    public ResponseEntity<List<Transaction>> getBookTransactions(@PathVariable Long bookId){
-        List<Transaction> transactions = transactionService.getBookTransactions(bookId);
-        return new ResponseEntity<>(transactions,HttpStatus.OK);
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<List<Transaction>> getBookTransactions(@PathVariable Long bookId) {
+        List<Transaction> transactions = transactionService.getBookTransactions(bookId); // Matches your service method
+        return ResponseEntity.ok(transactions);
     }
-
-    //Get overdue books
+    
+    // Only LIBRARIAN can view overdue books
     @GetMapping("/overdue")
-    public ResponseEntity<List<Transaction>> getOverdueBooks(){
-        List<Transaction> transactions = transactionService.getOverDueBooks();
-        return new ResponseEntity<>(transactions,HttpStatus.OK);
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<List<Transaction>> getOverdueBooks() {
+        List<Transaction> overdueTransactions = transactionService.getOverDueBooks(); // Matches your service method
+        return ResponseEntity.ok(overdueTransactions);
     }
-
-    //get Actve Borrowings
+    
+    // Only LIBRARIAN can view active borrowings
     @GetMapping("/active")
-    public ResponseEntity<List<Transaction>> getActiveBorrowings(){
-        List<Transaction> transactions = transactionService.getActiveBorrowings();
-        return new ResponseEntity<>(transactions,HttpStatus.OK);
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<List<Transaction>> getActiveBorrowings() {
+        List<Transaction> activeTransactions = transactionService.getActiveBorrowings(); // Matches your service method
+        return ResponseEntity.ok(activeTransactions);
     }
-
 }

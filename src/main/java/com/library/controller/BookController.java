@@ -7,6 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +25,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/books")
+@CrossOrigin(origins = "*")
 public class BookController {
 
   
@@ -31,6 +34,7 @@ public class BookController {
 
     //Create new Book
     @PostMapping
+    @PreAuthorize("hasRole('LIBRARIAN')")
     public ResponseEntity<?> createBook(@Valid @RequestBody Book book){
         try {
             Book createdBook = bookService.createBook(book);
@@ -97,6 +101,7 @@ public class BookController {
     
     //Update book
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('LIBRARIAN')")
     public ResponseEntity<?> updateBook(@PathVariable Long id, @Valid @RequestBody Book bookDetails){
         try {
             Book updatedBook = bookService.updateBook(id, bookDetails);
@@ -108,6 +113,7 @@ public class BookController {
 
     //Delete book
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('LIBRARIAN')")
     public ResponseEntity<?> deleteBook(@PathVariable Long id){
         try {
             bookService.deleteBook(id);
