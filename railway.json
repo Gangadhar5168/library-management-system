@@ -3,6 +3,6 @@
     "command": "mvn clean package -DskipTests"
   },
   "start": {
-    "command": "java -Dspring.profiles.active=prod -Dserver.port=$PORT -jar target/*.jar"
+    "command": "java -Dspring.profiles.active=prod -Dserver.port=$PORT -Dspring.datasource.url=jdbc:h2:mem:library -Dspring.jpa.database-platform=org.hibernate.dialect.H2Dialect -jar target/*.jar"
   }
 }
