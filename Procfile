@@ -1,1 +1,0 @@
-web: java -Xmx512m -Dspring.profiles.active=prod -Dserver.port=$PORT -jar target/library-management-system-0.0.1-SNAPSHOT.jar
