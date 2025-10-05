@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>👥 Users - Library Management System</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Add to <head> section of all HTML files -->
+    <style>
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        .container-fluid {
+            padding: 0;
+        }
+        
+        .card {
+            margin-bottom: 1rem;
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+        
+        .btn-sm {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+        }
+        
+        .table-responsive {
+            border: none;
+        }
+    }
+
+    /* Sidebar improvements */
+    #sidebar {
+        min-height: 100vh;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sticky-top {
+        z-index: 1020;
+    }
+
+    /* Pagination improvements */
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .page-link {
+        min-width: 40px;
+        text-align: center;
+    }
+
+    /* Card improvements */
+    .card {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    }
+
+    /* Loading states */
+    .loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+    }
+
+    /* Elegant User List Styling */
+    .user-card {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+
+    .user-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,123,255,0.15) !important;
+        border-color: rgba(0,123,255,0.2) !important;
+    }
+
+    .user-avatar .avatar-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        box-shadow: 0 4px 8px rgba(0,123,255,0.2);
+    }
+
+    .user-info .info-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .user-info .info-item i {
+        width: 16px;
+        text-align: center;
+    }
+
+    .user-actions .btn-group .btn {
+        font-size: 0.85rem;
+        font-weight: 500;
+        border-width: 1.5px;
+        transition: all 0.2s ease;
+    }
+
+    .user-actions .btn-group .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .badge.bg-gradient-primary {
+        background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    }
+
+    .badge.bg-gradient-warning {
+        background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+    }
+
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        .user-card .row > div {
+            margin-bottom: 1rem;
+        }
+        
+        .user-card .row .col-md-4:last-child {
+            margin-bottom: 0;
+        }
+        
+        .user-actions .btn-group {
+            width: 100%;
+        }
+        
+        .user-actions .btn-group .btn {
+            flex: 1;
+            font-size: 0.8rem;
+        }
+        
+        .user-avatar .avatar-circle {
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+    }
+
+    /* Pagination styling */
+    .pagination .page-link {
+        color: #007bff;
+        border: 1px solid #dee2e6;
+        padding: 0.75rem 1rem;
+        margin: 0 2px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #f8f9fa;
+        border-color: #007bff;
+        transform: translateY(-1px);
+    }
+
+    .pagination .page-item.active .page-link {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border-color: #007bff;
+        box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+    }
+
+    /* Card header improvements */
+    .card-header {
+        border-bottom: 2px solid #f1f3f4;
+    }
+
+    .card-footer {
+        border-top: 2px solid #f1f3f4;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html">
+                <i class="fas fa-book"></i> Library System
+            </a>
+            
+            <div class="navbar-nav ms-auto">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" 
+                       data-bs-toggle="dropdown">
+                        <i class="fas fa-user"></i> <span id="userName">Loading...</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="showProfile()">
+                            <i class="fas fa-user-circle"></i> My Profile
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Responsive Sidebar -->
+            <div class="col-lg-2 col-md-3 bg-dark text-white p-0 d-none d-md-block" id="sidebar">
+                <div class="sticky-top" style="top: 0;">
+                    <div class="p-3 border-bottom">
+                        <h5 class="mb-0">📚 Library</h5>
+                        <small class="text-muted">Management System</small>
+                    </div>
+                    
+                    <nav class="nav flex-column p-2">
+                        <a class="nav-link text-white py-2" href="dashboard.html">
+                            <i class="fas fa-home me-2"></i> Dashboard
+                        </a>
+                        <a class="nav-link text-white py-2" href="books.html">
+                            <i class="fas fa-book me-2"></i> Books
+                        </a>
+                        <a class="nav-link text-white py-2" href="transactions.html">
+                            <i class="fas fa-exchange-alt me-2"></i> Transactions
+                        </a>
+                        <a class="nav-link text-white py-2 active" href="users.html" id="usersNavItem">
+                            <i class="fas fa-users me-2"></i> Users
+                        </a>
+                    </nav>
+                    
+                    <div class="p-3 border-top mt-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user me-2"></i>
+                                <span id="userName">User</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#" onclick="showProfile()">
+                                    <i class="fas fa-user-circle me-2"></i> Profile
+                                </a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" onclick="logout()">
+                                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark d-md-none">
+                <div class="container-fluid">
+                    <a class="navbar-brand font-display text-float" href="dashboard.html">📚 Library</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mobileNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.html">
+                                    <i class="fas fa-home me-2"></i> Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="books.html">
+                                    <i class="fas fa-book me-2"></i> Books
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="transactions.html">
+                                    <i class="fas fa-exchange-alt me-2"></i> Transactions
+                                </a>
+                            </li>
+                            <li class="nav-item" id="mobileUsersNavItem">
+                                <a class="nav-link active" href="users.html">
+                                    <i class="fas fa-users me-2"></i> Users
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user me-2"></i>
+                                    <span id="mobileUserName">User</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#" onclick="showProfile()">
+                                        <i class="fas fa-user-circle me-2"></i> Profile
+                                    </a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#" onclick="logout()">
+                                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Main Content -->
+            <div class="col-lg-10 col-md-9 col-12 p-0">
+                <main class="p-4">
+                    <!-- Your existing content here -->
+                    <!-- Header -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h2 class="font-display text-gradient text-float"><i class="fas fa-users"></i> Users Management</h2>
+                            <p class="lead text-elegant">Manage library users and their accounts with modern tools</p>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6>Total Users</h6>
+                                            <h3 id="totalUsers">Loading...</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-users fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6>Members</h6>
+                                            <h3 id="totalMembers">Loading...</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-user fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-warning text-white">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6>Librarians</h6>
+                                            <h3 id="totalLibrarians">Loading...</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fas fa-user-tie fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced User Filters -->
+                    <div class="filters-section glass-card p-4 mb-4 rounded-4 shadow-lg">
+                        <div class="row align-items-center">
+                            <div class="col-12 mb-3">
+                                <h6 class="font-display text-gradient mb-0">
+                                    <i class="fas fa-filter me-2"></i>User Discovery
+                                </h6>
+                                <small class="text-elegant text-muted">Find and manage library members</small>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-lg-5 col-md-6">
+                                <div class="filter-group">
+                                    <label class="form-label font-display">
+                                        <i class="fas fa-search text-primary me-2"></i>Search Users
+                                    </label>
+                                    <div class="input-group input-group-modern">
+                                        <span class="input-group-text bg-gradient-primary text-white border-0">
+                                            <i class="fas fa-users"></i>
+                                        </span>
+                                        <input type="text" class="form-control modern-input" id="searchUsers" 
+                                               placeholder="Name, username, or email..." 
+                                               onkeyup="filterUsers()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-6">
+                                <div class="filter-group">
+                                    <label class="form-label font-display">
+                                        <i class="fas fa-user-shield text-success me-2"></i>Role
+                                    </label>
+                                    <select class="form-select modern-select" id="roleFilter" onchange="filterUsers()">
+                                        <option value="">All Roles</option>
+                                        <option value="MEMBER">👤 Members</option>
+                                        <option value="LIBRARIAN">👨‍💼 Librarians</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-6">
+                                <div class="filter-group">
+                                    <label class="form-label font-display">
+                                        <i class="fas fa-activity text-info me-2"></i>Status
+                                    </label>
+                                    <select class="form-select modern-select" id="statusFilter" onchange="filterUsers()">
+                                        <option value="">All Status</option>
+                                        <option value="active">🟢 Active Users</option>
+                                        <option value="with-books">📚 Users with Books</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <div class="filter-group">
+                                    <label class="form-label font-display">
+                                        <i class="fas fa-list text-secondary me-2"></i>Per Page
+                                    </label>
+                                    <select class="form-select modern-select" id="usersPerPageSelect" onchange="changeUsersPerPage()">
+                                        <option value="3">3 users</option>
+                                        <option value="5">5 users</option>
+                                        <option value="8">8 users</option>
+                                        <option value="10">10 users</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Users List -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 text-primary">
+                                    <i class="fas fa-users me-2"></i>Users Directory
+                                </h5>
+                                <div class="d-flex align-items-center gap-3">
+                                    <button class="btn btn-outline-info btn-sm" onclick="showPaginationDemo()" title="See how pagination scales">
+                                        <i class="fas fa-info-circle me-1"></i>Pagination Demo
+                                    </button>
+                                    <small class="text-muted" id="usersCount">Loading...</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body p-0">
+                            <div id="loadingUsers" class="text-center py-5">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-3 text-muted">Loading users...</p>
+                            </div>
+
+                            <!-- Users Container -->
+                            <div class="container-fluid px-4 py-3" id="usersContainer" style="display: none;">
+                                <!-- Users will be loaded here -->
+                            </div>
+
+                            <div id="noUsersFound" style="display: none;" class="text-center py-5">
+                                <div class="mb-4">
+                                    <i class="fas fa-users fa-4x text-muted opacity-50"></i>
+                                </div>
+                                <h5 class="text-muted mb-2">No users found</h5>
+                                <p class="text-muted">Try adjusting your search criteria or filters.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="card-footer bg-white border-0 py-3">
+                            <div id="paginationContainer">
+                                <!-- Pagination will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-user-edit"></i> Edit User
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger d-none" id="editUserError">
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    <span id="editUserErrorText"></span>
+                </div>
+
+                <input type="hidden" id="editUserId">
+
+                <div class="mb-3">
+                    <label class="form-label">👤 Full Name *</label>
+                    <input type="text" class="form-control" id="editUserFullName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">🏷️ Username *</label>
+                    <input type="text" class="form-control" id="editUserUsername" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">📧 Email *</label>
+                    <input type="email" class="form-control" id="editUserEmail" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">📱 Phone Number</label>
+                    <input type="tel" class="form-control" id="editUserPhone">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">🎭 Role *</label>
+                    <select class="form-control" id="editUserRole" required>
+                        <option value="">Select Role</option>
+                        <option value="MEMBER">👤 Member</option>
+                        <option value="LIBRARIAN">👩‍🏫 Librarian</option>
+                    </select>
+                </div>
+
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Note:</strong> Changing the role will affect the user's access permissions immediately.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveUserChanges()">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/users.js"></script>
+</body>
+</html>

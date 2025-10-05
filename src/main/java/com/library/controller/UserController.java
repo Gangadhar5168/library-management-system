@@ -15,12 +15,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.library.exception.ResourceNotFoundException;
 import com.library.model.User;
 import com.library.service.UserService;
-
+import com.library.model.Role;
 import jakarta.validation.Valid;
 
 @RestController
@@ -86,6 +87,33 @@ public class UserController {
             return ResponseEntity.ok(userOptional.get());
         } else {
             throw new ResourceNotFoundException("User", "username", username);
+        }
+    }
+    
+    // Only LIBRARIAN can change user roles
+    @PutMapping("/{id}/role")
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<User> updateUserRole(@PathVariable Long id, @RequestParam String role) {
+        // Validate role
+        if (!role.equals("MEMBER") && !role.equals("LIBRARIAN")) {
+            return ResponseEntity.badRequest().build();
+        }
+        
+        try {
+            // Get the user first
+            Optional<User> userOptional = userService.getUserById(id);
+            if (!userOptional.isPresent()) {
+                throw new ResourceNotFoundException("User", "id", id);
+            }
+            
+            User user = userOptional.get();
+            user.setRole(Role.valueOf(role)); // Use Role directly, not User.Role
+            
+            User updatedUser = userService.updateUser(id, user);
+            return ResponseEntity.ok(updatedUser);
+            
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
         }
     }
 }
