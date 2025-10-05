@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,61 +25,67 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "*")
 public class UserController {
-
+    
     @Autowired
     private UserService userService;
     
-    //create new user
-    @PostMapping
-    public ResponseEntity<?> createUser(@Valid @RequestBody User user){
-        try {
-            User createdUser = userService.createUser(user);
-            return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
-        }
-        catch (RuntimeException e){
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-        }
-    }
-
-    // Get All users
+    // Only LIBRARIAN can view all users
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers(){
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllUsers();
-        return new ResponseEntity<>(users,HttpStatus.OK);
+        return ResponseEntity.ok(users);
     }
-
-    //Get user by id
+    
+    // LIBRARIAN can view any user, MEMBER can only view their own profile
     @GetMapping("/{id}")
-    public ResponseEntity<?> getUserById(@PathVariable Long id){
-        Optional<User> user = userService.getUserById(id);
-        if(user.isPresent()){
-            return new ResponseEntity<>(user.get(),HttpStatus.OK);
+    @PreAuthorize("hasRole('LIBRARIAN') or (hasRole('MEMBER') and #id == authentication.principal.id)")
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        Optional<User> userOptional = userService.getUserById(id); // Returns Optional<User>
+        
+        if (userOptional.isPresent()) {
+            return ResponseEntity.ok(userOptional.get());
+        } else {
+            throw new ResourceNotFoundException("User", "id", id);
         }
-        throw new ResourceNotFoundException("User", "id",id);
     }
-
-    // Update user
+    
+    // Only LIBRARIAN can create users (alternative to registration)
+    @PostMapping
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+        User createdUser = userService.createUser(user); // Matches your service method name
+        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
+    }
+    
+    // LIBRARIAN can update any user, MEMBER can only update their own profile
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateUser(@PathVariable Long id, @Valid @RequestBody User userDetails){
-        try {
-            User updatedUser = userService.updateUser(id, userDetails);
-            return new ResponseEntity<>(updatedUser, HttpStatus.OK);
-        }
-        catch(RuntimeException e){
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
-        }
+    @PreAuthorize("hasRole('LIBRARIAN') or (hasRole('MEMBER') and #id == authentication.principal.id)")
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @Valid @RequestBody User userDetails) {
+        User updatedUser = userService.updateUser(id, userDetails);
+        return ResponseEntity.ok(updatedUser);
     }
-
-    //Delete a user
+    
+    // Only LIBRARIAN can delete users
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable Long id){
-        try {
-            userService.deleteUser(id);
-            return new ResponseEntity<>("User deleted successfully", HttpStatus.OK);
-        } catch (RuntimeException e) {
-            
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+        return ResponseEntity.noContent().build();
+    }
+    
+    // Search users by username (LIBRARIAN only)
+    @GetMapping("/search/{username}")
+    @PreAuthorize("hasRole('LIBRARIAN')")
+    public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
+        Optional<User> userOptional = userService.getUserByUsername(username); // Returns Optional<User>
+        
+        if (userOptional.isPresent()) {
+            return ResponseEntity.ok(userOptional.get());
+        } else {
+            throw new ResourceNotFoundException("User", "username", username);
         }
     }
 }
